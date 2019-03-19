@@ -1,0 +1,25 @@
+@mixin set-background($data) {
+  $initial-props: map-keys(nth($data, 1));
+  $props-length: length($initial-props);
+  $data-length: length($data);
+
+  @for $i from 1 through $props-length {
+    $initial-prop: nth($initial-props, $i);
+    $prop: background-#{$initial-prop};
+    $value: "";
+
+    @for $j from 1 through $data-length {
+      $current-datum: nth($data, $j);
+      $current-values: map-values($current-datum);
+      $current-value: nth($current-values, $i);
+
+      @if $j != $data-length {
+        $current-value: str-insert($current-value, ", ", -1);
+      }
+
+      $value: str-insert($value, $current-value, -1);
+    }
+
+    #{$prop}: #{$value};
+  }
+}

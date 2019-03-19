@@ -1,0 +1,4 @@
+@mixin margin-hor($marginHorizontal: auto) {
+  margin-left: $marginHorizontal;
+  margin-right: $marginHorizontal;
+}

@@ -1,0 +1,4 @@
+@mixin padding-hor($paddingHorizontal: 16px) {
+  padding-left: $paddingHorizontal;
+  padding-right: $paddingHorizontal;
+}
