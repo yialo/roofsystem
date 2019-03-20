@@ -1,0 +1,5 @@
+.s-container {
+  @include outline(red);
+  @include margin-hor();
+  width: 1600px;
+}
