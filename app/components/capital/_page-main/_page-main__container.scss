@@ -1,0 +1,7 @@
+.page-main__container {
+  display: flex;
+
+  .page-main--gallery & {
+    display: grid;
+  }
+}

@@ -15,12 +15,12 @@ html(lang='ru')
       header.page__header
         include ../components/capital/_page-header/_page-header
       main.page__main
-        div(class=setModifiers('page-main', [pageId === 'gallery' ? 'complex' : 'basic']))
-          div(class=setModifiers('page-main__nest', ['titlebar']))
-            .titlebar
-              h1.titlebar__heading
-              ul.titlebar__list
-          block page-main__distinct
+        div(class=setModifiers('page-main', [pageId]))
+          .s-container.page-main__container
+            div(class=setModifiers('page-main__nest', ['immutable']))
+              +titlebar()
+            div(class=setModifiers('page-main__nest', ['mutable']))
+              block page-main__mutable
       footer.page__footer
         .page-footer
           .s-container.page-footer__container
@@ -30,5 +30,3 @@ html(lang='ru')
               a.page-footer__link(href='https://www.waytostart.ru/')
                 p.page-footer__paragraph Создание сайта WAYTOSTART
     script(src='js/picturefill.js')
-
-//- include ../components/capital/_titlebar/_titlebar

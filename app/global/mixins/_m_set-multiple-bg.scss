@@ -1,4 +1,4 @@
-@mixin set-background($data) {
+@mixin set-multiple-bg($data) {
   $initial-props: map-keys(nth($data, 1));
   $props-length: length($initial-props);
   $data-length: length($data);

@@ -1,0 +1,26 @@
+.page-main__nest {
+  &--immutable {
+    $immutable-margin-rights: (index: 136, about: 204, price: 206, contacts: 204,);
+
+    flex: 0 0 720px;
+    padding-top: 207px;
+
+    @each $modifier, $margin-right in $immutable-margin-rights {
+      .page-main--#{$modifier} & {
+        margin-right: #{$margin-right}px;
+      }
+    }
+  }
+
+  &--mutable {
+    $mutable-padding-tops: (index: 256, about: 207, gallery: 134, price: 202, contacts: 207,);
+
+    flex: 1 0 0;
+
+    @each $modifier, $padding-top in $mutable-padding-tops {
+      .page-main--#{$modifier} & {
+        padding-top: #{$padding-top}px;
+      }
+    }
+  }
+}

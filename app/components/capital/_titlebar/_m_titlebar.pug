@@ -1,0 +1,42 @@
+mixin titlebar()
+  -
+    const isIndex = (pageId === 'index');
+    const TITLEBAR_ITEM_TYPES = {
+      toAbout: ['about', 'Читать о компании'],
+      toGallery: ['gallery', 'Посмотреть галерею'],
+      toPrice: ['price', 'Узнать цены'],
+    };
+    const { toAbout, toGallery, toPrice } = TITLEBAR_ITEM_TYPES;
+    const getTitlebarItems = function getDatasetForTitlebarItems() {
+      let set;
+      switch (pageId) {
+        case 'index':
+        case 'about':
+        case 'contacts': {
+          set = [toPrice, toGallery];
+          break;
+        }
+        case 'gallery': {
+          set = [toPrice, toAbout];
+          break;
+        }
+        case 'price': {
+          set = [toGallery, toAbout];
+          break;
+        }
+      }
+      return set;
+    };
+  div(class=setModifiers('titlebar', [isIndex ? 'index' : 'inner']))
+    if isIndex
+      h1.titlebar__heading= SITE_TITLE
+      p.titlebar__lead Устройство, монтаж и ремонт фасада
+    else
+      h1.titlebar__lead= pageTitle
+    .titlebar__links
+      each item in getTitlebarItems()
+        - const [modifier, legend] = item;
+        a(
+          class=setModifiers('titlebar__link', [modifier]),
+          href=`${modifier}.html`,
+        )= legend

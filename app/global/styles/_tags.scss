@@ -15,16 +15,9 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1;
-  font-family: "helveticaneuecyr", "Arial", sans-serif;
-  color: black;
+  font-family: "pt_sans", "Arial", sans-serif;
+  color: $gray-text-basis;
   background-color: white;
-
-  @media (min-width: $xl-min-width) {
-    font-weight: 300;
-    font-size: 22px;
-    letter-spacing: 0.25px;
-    color: $gray-text-basis;
-  }
 }
 
 a {
