@@ -12,7 +12,7 @@
 
   .page-main--gallery & {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template: 1fr / 494px 110px 1fr;
     width: auto;
     padding-bottom: 578px;
   }

@@ -5,5 +5,16 @@ block page-id
 
 block page-main__mutable
   .contacts
+    - const CONTACTS_EMAILS = ['info', 'snab'];
     .contacs__container
-      +tel()(modifier='large')
+      div(class=setModifiers('contacts__nest', ['tel']))
+        +tel()(modifier='large')
+      div(class=setModifiers('contacts__nest', ['emails']))
+        each email, index in CONTACTS_EMAILS
+          a.contacts__email(href=`mailto:${email}@roofsystem.ru`)
+            | #[span.contacts__string #{email}]@roofsystem.ru
+      div(class=setModifiers('contacts__nest', ['address']))
+        p.s-paragraph.contacts__address
+          | 123060, г. Москва#[br]ул. Маршала Бирюзова, 35#[br]кор. 2, 1Б
+      div(class=setModifiers('contacts__nest', ['map']))
+        .map#map
