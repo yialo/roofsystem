@@ -1,14 +1,28 @@
 .page-main__container {
-  $page-main-container-pbs: (index: 440, about: 430, gallery: 578, price: 474, contacts: 663,);
   display: flex;
 
-  @each $modifier, $pb in $page-main-container-pbs {
-    .page-main--#{$modifier} & {
-      padding-bottom: #{$pb}px;
-    }
+  .page-main--index & {
+    padding-bottom: 440px;
+  }
+
+  .page-main--about & {
+    padding-top: 207px;
+    padding-bottom: 430px;
   }
 
   .page-main--gallery & {
     display: grid;
+    grid-template-rows: 1fr;
+    width: auto;
+    padding-bottom: 578px;
+  }
+
+  .page-main--price & {
+    padding-bottom: 474px;
+  }
+
+  .page-main--contacts & {
+    padding-top: 207px;
+    padding-bottom: 663px;
   }
 }

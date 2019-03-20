@@ -1,0 +1,15 @@
+.page-main__mutable {
+  flex: 1 0 0;
+
+  .page-main--index & {
+    margin-top: 256px;
+  }
+
+  .page-main--gallery & {
+    margin-top: 134px;
+  }
+
+  .page-main--price & {
+    margin-top: 202px;
+  }
+}

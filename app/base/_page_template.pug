@@ -17,9 +17,9 @@ html(lang='ru')
       main.page__main
         div(class=setModifiers('page-main', [pageId]))
           .s-container.page-main__container
-            div(class=setModifiers('page-main__nest', ['immutable']))
+            .page-main__stable
               +titlebar()
-            div(class=setModifiers('page-main__nest', ['mutable']))
+            .page-main__mutable
               block page-main__mutable
       footer.page__footer
         .page-footer

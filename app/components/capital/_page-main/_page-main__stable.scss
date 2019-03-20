@@ -1,0 +1,30 @@
+.page-main__stable {
+  flex-shrink: 0;
+
+  .page-main--index & {
+    width: 720px;
+    margin-top: 159px;
+    margin-right: 136px;
+  }
+
+  .page-main--about & {
+    width: 606px;
+    margin-right: 204px;
+  }
+
+  .page-main--gallery & {
+    width: 604px;
+    margin-top: 207px;
+  }
+
+  .page-main--price & {
+    width: 604px;
+    margin-top: 207px;
+    margin-right: 206px;
+  }
+
+  .page-main--contacts & {
+    width: 606px;
+    margin-right: 204px;
+  }
+}

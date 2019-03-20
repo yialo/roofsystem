@@ -1,5 +1,12 @@
 .tel__link {
-  font-weight: 700;
-  font-size: 20px;
   color: $gray-dark;
+
+  .tel--small & {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .tel--large & {
+    @include large-text();
+  }
 }

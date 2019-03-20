@@ -15,5 +15,4 @@ div(class=setModifiers('page-header', [pageId]))
               'navigation__item',
             ]): a.navigation-item__link(href=(!isCurrent ? `${id}.html` : null))= label
     div(class=setModifiers('page-header__nest', ['tel']))
-      .tel
-        a.tel__link(href=_TEL)= _TEL_TEXT
+      +tel()(modifier='small')

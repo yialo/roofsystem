@@ -6,21 +6,12 @@ mixin titlebar()
       const toGallery = ['gallery', 'Посмотреть галерею'];
       const toPrice = ['price', 'Узнать цены'];
       let set;
-      switch (pageId) {
-        case 'index':
-        case 'about':
-        case 'contacts': {
-          set = [toPrice, toGallery];
-          break;
-        }
-        case 'gallery': {
-          set = [toPrice, toAbout];
-          break;
-        }
-        case 'price': {
-          set = [toGallery, toAbout];
-          break;
-        }
+      if (['index', 'about', 'contacts'].includes(pageId)) {
+        set = [toPrice, toGallery];
+      } else if (pageId === 'gallery') {
+        set = [toPrice, toGallery];
+      } else {
+        set = [toGallery, toAbout];
       }
       return set;
     };
