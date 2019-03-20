@@ -1,9 +1,15 @@
 head
   include _d_general_meta
   include _d_fonts
+  include _d_favicons
   meta(charset='utf-8')
-  title WayToStart | #{SITE_TITLE} promo
+  title #{pageTitle} | #{SITE_TITLE}
   each item in GENERAL_META_DATA
+    - const [name, content] = item;
+    meta(name=name, content=content)
+  each item in FAVICONS_LINK_DATA
+    link&attributes(item)
+  each item in FAVICONS_META_DATA
     - const [name, content] = item;
     meta(name=name, content=content)
   each value, key in FONT_SETS

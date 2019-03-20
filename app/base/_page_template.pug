@@ -1,4 +1,10 @@
 include ../global/data/_d_site
+include ../global/data/_d_pages
+
+block page-id
+
+- const pageTitle = PAGES[pageId];
+
 include ../global/data/_d_components
 include _import_functions
 include _import_mixins
@@ -6,4 +12,6 @@ include _import_mixins
 doctype html
 html(lang='ru')
   include ../global/head/_head
-block page
+  body(class=setModifiers('page', [pageId]))
+    .page__container
+    script(src='js/picturefill.js')
