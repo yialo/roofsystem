@@ -14,4 +14,21 @@ html(lang='ru')
     .page__container
       header.page__header
         include ../components/capital/_page-header/_page-header
+      main.page__main
+        div(class=setModifiers('page-main', [pageId === 'gallery' ? 'complex' : 'basic']))
+          div(class=setModifiers('page-main__nest', ['titlebar']))
+            .titlebar
+              h1.titlebar__heading
+              ul.titlebar__list
+          block page-main__distinct
+      footer.page__footer
+        .page-footer
+          .s-container.page-footer__container
+            div(class=setModifiers('page-footer__nest', ['copyright']))
+              p.page-footer__paragraph © 2018 Roofsystem. Все права защищены.
+            div(class=setModifiers('page-footer__nest', ['creator']))
+              a.page-footer__link(href='https://www.waytostart.ru/')
+                p.page-footer__paragraph Создание сайта WAYTOSTART
     script(src='js/picturefill.js')
+
+//- include ../components/capital/_titlebar/_titlebar
