@@ -1,5 +1,12 @@
 .page-main__container {
+  $page-main-container-pbs: (index: 440, about: 430, gallery: 578, price: 474, contacts: 663,);
   display: flex;
+
+  @each $modifier, $pb in $page-main-container-pbs {
+    .page-main--#{$modifier} & {
+      padding-bottom: #{$pb}px;
+    }
+  }
 
   .page-main--gallery & {
     display: grid;

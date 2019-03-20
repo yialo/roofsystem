@@ -1,3 +1,12 @@
 .page-main {
   background-color: $gray-bg;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-image: url("../img/page-main@1920.png");
+
+  @each $modifier in (index, about,) {
+    &--#{$modifier} {
+      background-image: url("../img/page-main--#{$modifier}@1920.png");
+    }
+  }
 }

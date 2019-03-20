@@ -1,13 +1,10 @@
 mixin titlebar()
   -
     const isIndex = (pageId === 'index');
-    const TITLEBAR_ITEM_TYPES = {
-      toAbout: ['about', 'Читать о компании'],
-      toGallery: ['gallery', 'Посмотреть галерею'],
-      toPrice: ['price', 'Узнать цены'],
-    };
-    const { toAbout, toGallery, toPrice } = TITLEBAR_ITEM_TYPES;
     const getTitlebarItems = function getDatasetForTitlebarItems() {
+      const toAbout = ['about', 'Читать о компании'];
+      const toGallery = ['gallery', 'Посмотреть галерею'];
+      const toPrice = ['price', 'Узнать цены'];
       let set;
       switch (pageId) {
         case 'index':
