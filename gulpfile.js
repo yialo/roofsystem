@@ -25,7 +25,7 @@ const zopfli = require('imagemin-zopfli');
 // Vinyl variables
 
 const imageProcessingPaths = {
-  base: './spec/img-processing/',
+  input: './spec/img-processing/input/',
   output: './spec/img-processing/output/',
 };
 const bitmapExts = '{gif,jpg,png}';
@@ -40,7 +40,7 @@ const jsPaths = [
 
 const minsvg = function mimimizeSvgImages() {
   return gulp
-    .src(`${imageProcessingPaths.base}*.svg`)
+    .src(`${imageProcessingPaths.input}*.svg`)
     .pipe(
       minimage([
         minimage.svgo({
@@ -98,7 +98,7 @@ const minsvg = function mimimizeSvgImages() {
 
 const minbitmap = function minimizeBitmapImages() {
   return gulp
-    .src(`${imageProcessingPaths.base}*.${bitmapExts}`)
+    .src(`${imageProcessingPaths.input}*.${bitmapExts}`)
     .pipe(
       minimage([
         gifsicle(),
