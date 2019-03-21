@@ -1,0 +1,44 @@
+.price__entry {
+  $i-ver: "url(\"../img/price__entry--vertical.svg\")";
+  $i-hor: "url(\"../img/price__entry--horizontal.svg\")";
+  $p-start: "0.5px";
+  $p-end: "calc(100% - 1.5px)";
+  $s-ver: "1px 8px";
+  $s-hor: "8px 1px";
+  $entry-stroker: (
+    (image: $i-ver, position: "#{$p-start} #{$p-start}", size: $s-ver, repeat: repeat-y,),
+    (image: $i-ver, position: "#{$p-end} #{$p-start}", size: $s-ver, repeat: repeat-y,),
+    (image: $i-hor, position: "#{$p-start} #{$p-start}", size: $s-hor, repeat: repeat-x,),
+    (image: $i-hor, position: "#{$p-start} #{$p-end}", size: $s-hor, repeat: repeat-x,),
+  );
+
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  &--key {
+    width: calc(100% - 124px);
+    padding-left: 24px;
+  }
+
+  &--stroked {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      @include set-multiple-bg($entry-stroker);
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: calc(100% + 124px);
+      height: 100%;
+    }
+  }
+
+  &--value {
+    width: 124px;
+    margin-left: 0;
+    padding-right: 24px;
+  }
+}
