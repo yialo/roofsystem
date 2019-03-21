@@ -1,5 +1,4 @@
 .page__container {
-  @include outline(blue);
   @include margin-hor();
   width: $xl-min-width;
 }

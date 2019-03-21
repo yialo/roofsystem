@@ -1,8 +1,11 @@
 .page-main__mutable {
-  flex: 1 0 0;
-
   .page-main--index & {
+    width: 788px;
     margin-top: 256px;
+  }
+
+  .page-main--about & {
+    width: 600px;
   }
 
   .page-main--gallery & {
@@ -11,6 +14,11 @@
   }
 
   .page-main--price & {
+    width: 786px;
     margin-top: 202px;
+  }
+
+  .page-main--contacts & {
+    width: 784px;
   }
 }

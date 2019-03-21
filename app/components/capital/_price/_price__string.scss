@@ -1,0 +1,10 @@
+.price__string {
+  &--colored {
+    color: $coral;
+  }
+
+  &--small {
+    font-size: 24px;
+    color: $gray-light;
+  }
+}

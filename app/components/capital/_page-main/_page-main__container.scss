@@ -13,6 +13,7 @@
   .page-main--gallery & {
     display: grid;
     grid-template: 1fr / 494px 110px 1fr;
+    justify-content: start;
     width: auto;
     padding-bottom: 578px;
   }

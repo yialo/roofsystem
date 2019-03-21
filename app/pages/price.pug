@@ -2,3 +2,13 @@ extends ../base/_template_html
 
 block page-id
   - const pageId = 'price';
+
+block page-main__mutable
+  .price
+    .price__container
+      p.price__headline
+        span.price__string-wrapper
+          = 'от '
+          span(class=setModifiers('price__string', ['colored'])) 900
+          = ' руб/м² '
+        span(class=setModifiers('price__string', ['small'])) (под ключ)

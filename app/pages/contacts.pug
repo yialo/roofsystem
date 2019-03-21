@@ -6,7 +6,7 @@ block page-id
 block page-main__mutable
   .contacts
     - const CONTACTS_EMAILS = ['info', 'snab'];
-    .contacs__container
+    .contacts__container
       div(class=setModifiers('contacts__nest', ['tel']))
         +tel()(modifier='large')
       div(class=setModifiers('contacts__nest', ['emails']))
