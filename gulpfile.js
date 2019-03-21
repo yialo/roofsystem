@@ -137,8 +137,8 @@ const copyfonts = function copyFontFilesToBuildFolder() {
 
 const copysvg = function copySvgImagesToBuildFolder() {
   return gulp.src([
-    './app/global/svg/*.svg',
-    './app/components/**/svg/*.svg',
+    './app/global/svg/**/.svg',
+    './app/components/**/svg/**/*.svg',
   ])
     .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
@@ -146,8 +146,8 @@ const copysvg = function copySvgImagesToBuildFolder() {
 
 const copybitmaps = function copyBitmapImagesToBuildFolder() {
   return gulp.src([
-    `./app/global/bitmaps/*.${bitmapExts}`,
-    `./app/components/**/bitmaps/*.${bitmapExts}`,
+    `./app/global/bitmaps/**/*.${bitmapExts}`,
+    `./app/components/**/bitmaps/**/*.${bitmapExts}`,
   ])
     .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
@@ -206,7 +206,7 @@ const watchJs = function watchForJavascriptFiles() {
 
 const watchSvg = function watchForSvgFiles() {
   return gulp.watch(
-    ['./app/global/svg/*.svg', './app/components/**/svg/*.svg'],
+    ['./app/global/svg/**/*.svg', './app/components/**/svg/**/*.svg'],
     gulp.series(copysvg, reload),
   );
 };
@@ -215,8 +215,8 @@ const watchBitmaps = function watchForBitmapFiles() {
   return gulp
     .watch(
       [
-        `./app/global/bitmaps/*.${bitmapExts}`,
-        `./app/components/**/bitmaps/*.${bitmapExts}`,
+        `./app/global/bitmaps/**/*.${bitmapExts}`,
+        `./app/components/**/bitmaps/**/*.${bitmapExts}`,
       ],
       gulp.series(copybitmaps, reload),
     );
