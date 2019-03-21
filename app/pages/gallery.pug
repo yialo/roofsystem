@@ -2,3 +2,19 @@ extends ../base/_template_html
 
 block page-id
   - const pageId = 'gallery';
+
+block page-main__mutable
+  .gallery
+    - const GALLERY_IMAGE_LEGEND = 'Коттеджный поселок “Люто дорого”';
+    ul.gallery__list
+      - for (let i = 1; i <= 4; i += 1)
+        li(class=[setModifiers('gallery-item', [i]), setModifiers('gallery__item', [i])])
+          .gallery-item__container
+            picture.gallery-item__picture
+              img.gallery-item__image(
+                src=`img/gallery-item__image--${i}.jpg`,
+                alt=GALLERY_IMAGE_LEGEND,
+              )
+            p.gallery-item__caption
+              time.gallery-item__time(datetime='2018-02-13') 13.02.2018
+              span.s-text.gallery-item__legend= GALLERY_IMAGE_LEGEND

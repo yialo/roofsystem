@@ -16,4 +16,4 @@ block page-main__mutable
       h2.about__heading #[span.about__string 12 лет] на рынке
       .about__textblock
         each paragraph, index in ABOUT_PARAGRAPHS
-          p.s-paragraph(class=setLastModifier('about__paragraph', ABOUT_PARAGRAPHS, index))= paragraph
+          p.s-text(class=setLastModifier('about__paragraph', ABOUT_PARAGRAPHS, index))= paragraph
