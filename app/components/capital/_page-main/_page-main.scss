@@ -5,9 +5,11 @@
   background-repeat: no-repeat;
   background-image: url("../img/page-main@1920.png");
 
-  @each $modifier in (index, about,) {
-    &--#{$modifier} {
-      background-image: url("../img/page-main--#{$modifier}@1920.png");
-    }
+  &--index {
+    background-image: none;
+  }
+
+  &--about {
+    background-image: url("../img/page-main--about@1920.png");
   }
 }

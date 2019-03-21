@@ -1,6 +1,5 @@
-mixin titlebar()
+mixin titlebar__links()
   -
-    const isIndex = (pageId === 'index');
     const getTitlebarItems = function getDatasetForTitlebarItems() {
       const toAbout = ['about', 'Читать о компании'];
       const toGallery = ['gallery', 'Посмотреть галерею'];
@@ -15,16 +14,10 @@ mixin titlebar()
       }
       return set;
     };
-  div(class=setModifiers('titlebar', [isIndex ? 'index' : 'inner']))
-    if isIndex
-      h1.titlebar__heading= SITE_TITLE
-      p.titlebar__lead Устройство, монтаж и ремонт фасада
-    else
-      h1.titlebar__lead= pageTitle
-    .titlebar__links
-      each item in getTitlebarItems()
-        - const [modifier, legend] = item;
-        a(
-          class=setModifiers('titlebar__link', [modifier]),
-          href=`${modifier}.html`,
-        )= legend
+  .titlebar__links
+    each item in getTitlebarItems()
+      - const [modifier, legend] = item;
+      a(
+        class=setModifiers('titlebar__link', [modifier]),
+        href=`${modifier}.html`,
+      )= legend

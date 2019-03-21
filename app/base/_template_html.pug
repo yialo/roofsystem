@@ -21,12 +21,7 @@ html(lang='ru')
       header.page__header
         include ../components/capital/_page-header/_page-header
       main.page__main
-        div(class=setModifiers('page-main', [pageId]))
-          .s-container.page-main__container
-            .page-main__stable
-              +titlebar()
-            .page-main__mutable
-              block page-main__mutable
+        block page-main
       footer.page__footer
         .page-footer
           .s-container.page-footer__container

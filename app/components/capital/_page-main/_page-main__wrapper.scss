@@ -1,0 +1,17 @@
+.page-main__wrapper {
+  &--1 {
+    background-image: url("../img/page-main@1920.png");
+
+    .is-slide-2-shown & {
+      display: none;
+    }
+  }
+
+  &--2 {
+    background-image: url("../img/page-main--index@1920.png");
+
+    .is-slide-1-shown & {
+      display: none;
+    }
+  }
+}
