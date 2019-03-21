@@ -1,4 +1,9 @@
 .page-main__wrapper {
+  flex-grow: 1;
+  background-color: $gray-bg;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+
   &--1 {
     background-image: url("../img/page-main@1920.png");
 

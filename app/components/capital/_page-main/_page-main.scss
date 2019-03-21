@@ -6,6 +6,9 @@
   background-image: url("../img/page-main@1920.png");
 
   &--index {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
     background-image: none;
   }
 
