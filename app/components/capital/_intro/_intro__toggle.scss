@@ -1,8 +1,21 @@
 .intro__toggle {
+  position: relative;
+  z-index: 0;
   width: 462px;
   height: 100%;
   margin-left: auto;
   padding: 0;
   border-style: none;
   background-color: $gray-air;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 40px;
+  }
 }
