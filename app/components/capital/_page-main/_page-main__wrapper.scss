@@ -7,16 +7,17 @@
   &--1 {
     background-image: url("../img/page-main@1920.png");
 
-    .is-slide-2-shown & {
+    .is-second-slide-shown & {
       display: none;
     }
   }
 
   &--2 {
+    display: none;
     background-image: url("../img/page-main--index@1920.png");
 
-    .is-slide-1-shown & {
-      display: none;
+    .is-second-slide-shown & {
+      display: block;
     }
   }
 }
