@@ -13,8 +13,9 @@
   }
 
   @media (min-width: $xl-min-width) {
-    @include large-text();
+    font-size: 64px;
     line-height: 1;
+    letter-spacing: 0.03em;
     text-align: left;
 
     .titlebar--inner & {

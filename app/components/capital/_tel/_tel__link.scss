@@ -11,13 +11,17 @@
     letter-spacing: 0.03em;
   }
 
-  @media (min-width: $xl-min-width) {
-    .tel--small & {
+  @include media-breakpoint-down(md) {
+    .tel-small & {
       font-size: 20px;
     }
+  }
 
+  @media (min-width: $xl-min-width) {
     .tel--large & {
-      @include large-text();
+      font-size: 64px;
+      line-height: 72px;
+      letter-spacing: 0.03em;
     }
   }
 }

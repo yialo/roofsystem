@@ -5,7 +5,9 @@
   color: $gray-light;
 
   @media (min-width: $xl-min-width) {
-    @include large-text();
     margin-bottom: 40px;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: 0.03em;
   }
 }

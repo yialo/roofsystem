@@ -2,7 +2,7 @@
   display: block;
   width: 50px;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-down(md) {
     width: 88px;
   }
 }

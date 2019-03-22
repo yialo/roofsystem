@@ -1,9 +1,8 @@
 .navigation__list {
   @include list();
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(lg) {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
