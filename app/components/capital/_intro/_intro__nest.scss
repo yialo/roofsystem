@@ -1,7 +1,10 @@
 .intro__nest {
-  @include padding-hor(30px);
+  &--content {
+    @include padding-hor(30px);
+  }
 
   &--paginator {
+    @include padding-hor(15px);
     height: 16px;
     margin-bottom: 30px;
   }
