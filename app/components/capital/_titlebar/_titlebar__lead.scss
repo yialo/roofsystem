@@ -3,6 +3,7 @@
   margin-bottom: 0;
   font-weight: 700;
   font-size: 32px;
+  line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
   color: $gray-dark;
@@ -13,6 +14,7 @@
 
   @media (min-width: $xl-min-width) {
     @include large-text();
+    line-height: 1;
     text-align: left;
 
     .titlebar--inner & {
