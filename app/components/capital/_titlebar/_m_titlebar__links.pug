@@ -8,7 +8,7 @@ mixin titlebar__links()
       if (['index', 'about', 'contacts'].includes(pageId)) {
         set = [toPrice, toGallery];
       } else if (pageId === 'gallery') {
-        set = [toPrice, toGallery];
+        set = [toPrice, toAbout];
       } else {
         set = [toGallery, toAbout];
       }

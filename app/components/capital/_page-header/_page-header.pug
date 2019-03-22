@@ -14,17 +14,29 @@ div(class=setModifiers('page-header', [pageId])).container
               isCurrent ? 'navigation-item--current' : null,
               'navigation__item',
             ]): a.navigation-item__link(href=(!isCurrent ? `${id}.html` : null))= label
-    div(class=setModifiers('page-header__nest', ['tel'])).col-7
+    div(class=setModifiers('page-header__nest', ['tel'])).col-6
       +tel()(modifier='small')
-    .navigation-control.col-2
-      -
-        const NAVIGATION_CONTROL_BUTTONS = [
-          ['opener', 'Показать'],
-          ['closer', 'Скрыть'],
-        ];
-      each button in NAVIGATION_CONTROL_BUTTONS
-       - const [modifier, legend] = button;
-        button(
-          class=setModifiers('navigation-control__button', [modifier]),
-          aria-label=`${legend} главное меню`,
-        )
+    div(class=setModifiers('page-header__nest', ['button'])).col-3
+      .navigation-control
+        -
+          const NAVIGATION_CONTROL_BUTTONS = [
+            ['opener', 'Показать'],
+            ['closer', 'Скрыть'],
+          ];
+        each button in NAVIGATION_CONTROL_BUTTONS
+          - const [modifier, legend] = button;
+            button(
+              class=[
+                setModifiers('navigation-button', [modifier]), 'navigation-control__button',
+              ],
+              type='button',
+              aria-label=`${legend} главное меню`,
+            )
+              if modifier === 'opener'
+                .navigation-button__wrapper
+                  each line in ['top', 'center', 'bottom']
+                    span(
+                      class=setModifiers('navigation-button__line', [line]),
+                      aria-hidden='true',
+                      role='presentation',
+                    )

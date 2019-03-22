@@ -1,14 +1,15 @@
 .titlebar__lead {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $gray-dark;
+
   @media (min-width: $xl-min-width) {
     @include large-text();
-    margin-top: 0;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: $gray-dark;
-
-    .titlebar--index & {
-      margin-bottom: 0;
-    }
+    text-align: left;
 
     .titlebar--inner & {
       margin-bottom: 64px;

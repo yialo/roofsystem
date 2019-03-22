@@ -1,0 +1,11 @@
+.tel {
+  &--small {
+    text-align: center;
+  }
+
+  @media (min-width: $xl-min-width) {
+    &--small {
+      text-align: left;
+    }
+  }
+}

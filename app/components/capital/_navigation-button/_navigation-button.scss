@@ -1,0 +1,19 @@
+.navigation-button {
+  padding: 4px;
+  border-style: none;
+  background-color: transparent;
+
+  &--closer {
+    display: none;
+    background-image: url("../img/navigation-button--closer.svg");
+    background-position: center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+  }
+
+  &--opener {
+    .is-navigation-shown & {
+      display: block;
+    }
+  }
+}

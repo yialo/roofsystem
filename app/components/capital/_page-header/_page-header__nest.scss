@@ -1,12 +1,33 @@
 .page-header__nest {
+  &--logo {
+    margin-top: 12px;
+    margin-bottom: 11px;
+  }
+
   &--navigation {
     display: none;
   }
 
+  &--tel {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--button {
+    margin-top: 12px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: 992px) {
+    &--button {
+      display: none;
+    }
+  }
+
   @media (min-width: $xl-min-width) {
     &--logo {
-      margin-top: 12px;
-      margin-bottom: 11px;
       margin-right: 720px;
     }
 

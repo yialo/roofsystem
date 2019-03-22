@@ -1,9 +1,17 @@
 .tel__link {
-  @media (min-width: $xl-min-width) {
-    color: $gray-dark;
+  color: $gray-dark;
 
+  .tel--small & {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .tel--large & {
+    letter-spacing: 0.03em;
+  }
+
+  @media (min-width: $xl-min-width) {
     .tel--small & {
-      font-weight: 700;
       font-size: 20px;
     }
 
