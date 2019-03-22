@@ -1,12 +1,19 @@
 .intro__nest {
-  @media (min-width: $xl-min-width) {
-    &--paginator {
-      height: 16px;
-      margin-bottom: 30px;
-    }
+  @include padding-hor(30px);
 
+  &--paginator {
+    height: 16px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $xl-min-width) {
     &--content {
       padding-left: 26px;
+      padding-right: 0;
+    }
+
+    &--paginator {
+      @include padding-hor(0);
     }
   }
 }

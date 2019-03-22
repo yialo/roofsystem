@@ -1,7 +1,0 @@
-.intro__container {
-  @include padding-hor(30px);
-
-  @media (min-width: $xl-min-width) {
-    @include padding-hor(0);
-  }
-}
