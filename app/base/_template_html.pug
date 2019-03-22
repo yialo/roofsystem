@@ -15,21 +15,39 @@ html(lang='ru')
     include ../global/head/_head_general_meta
     include ../global/head/_head_favicons
     include ../global/head/_head_fonts
-    link(rel='stylesheet', href='css/main.min.css')
     if pageId === 'gallery'
       link(
         rel='preload',
         href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
         as='script',
       )
+      link(rel='preload', href='js/slick.js', as='script')
+    link(rel='stylesheet', href='css/main.min.css')
   body(class=setModifiers('page', [pageId]))
     .page__container
       header.page__header
         include ../components/capital/_page-header/_page-header
       main.page__main
-        block page-main
+        div(class=[
+          setModifiers('page-main', [pageId]),
+          pageId !== 'index' ? 'container' : null,
+        ])
+          block page-main-Content
       footer.page__footer
         include ../components/capital/_page-footer/_page-footer
-    block scripts
       script(src='js/picturefill.js')
       script(src='js/_page-header.js')
+      case pageId
+        when 'index'
+          script(src='js/_intro.js')
+        when 'gallery'
+          script.
+            window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
+          script(src='js/slick.js')
+          script(src='js/_gallery-item.js')
+        when 'contacts'
+          script(
+            src='https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU',
+            type='text/javascript',
+          )
+          script(src='js/_contacts__map.js')

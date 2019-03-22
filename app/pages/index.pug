@@ -3,40 +3,40 @@ extends ../base/_template_html
 block page-id
   - const pageId = 'index';
 
-block page-main
-  div(class=setModifiers('page-main', [pageId]))
+block page-main-Content
+  -
+    const INTRO_SLIDES = [
+      ['кровли', 'первый'],
+      ['фасада', 'второй'],
+    ];
+  each slide, i in INTRO_SLIDES
     -
-      const INTRO_SLIDES = [
-        ['кровли', 'первый'],
-        ['фасада', 'второй'],
-      ];
-    each slide, i in INTRO_SLIDES
-      -
-        const number = i + 1;
-        const [product, numeral] = slide;
-      div(class=setModifiers('page-main__wrapper', [number])).container
-        .s-container.page-main__container.row
-          .page-main__stable.col-12
-            div(class=setModifiers('titlebar', ['index']))
-              h1.titlebar__heading= SITE_TITLE
-              .titlebar__lead-wrapper
-                p(class=setModifiers('titlebar__lead', [number]))
-                  | Устройство, монтаж и ремонт #{product}
-              +titlebar__links()
-          .page-main__mutable.col-12
-            div.intro
-              .intro__container
-                div(class=setModifiers('intro__nest', ['paginator']))
-                  .intro__paginator
-                    each modifier, index in ['current', 'another']
-                      span(
-                        class=setModifiers('intro__number', [modifier]),
-                        role='presentation',
-                        aria-hidden='true',
-                      )= (number === 1 ? index + 1 : 2 - index)
-                    .intro__bar
-                      button.intro__toggle(type='button' aria-label=`Перейти на ${numeral} слайд`)
-                div(class=setModifiers('intro__nest', ['content']))
-                  p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка новой кровли обходится в приличную сумму денег, занимает большое количество времени.
-append scripts
-  script(src='js/_intro.js')
+      const number = i + 1;
+      const [product, numeral] = slide;
+    div(class=setModifiers('page-main__wrapper', [number])).container
+      .s-container.page-main__container.row
+        .page-main__stable.col-12
+          div(class=setModifiers('titlebar', ['index']))
+            h1.titlebar__heading= SITE_TITLE
+            .titlebar__lead-wrapper
+              p(class=setModifiers('titlebar__lead', [number]))
+                | Устройство, монтаж и ремонт #{product}
+            +titlebar__links()
+        .page-main__mutable.col-12
+          div.intro
+            .intro__container
+              div(class=setModifiers('intro__nest', ['paginator']))
+                .intro__paginator
+                  each modifier, index in ['current', 'another']
+                    span(
+                      class=setModifiers('intro__number', [modifier]),
+                      role='presentation',
+                      aria-hidden='true',
+                    )= (number === 1 ? index + 1 : 2 - index)
+                  .intro__bar
+                    button.intro__toggle(
+                      type='button',
+                      aria-label=`Перейти на ${numeral} слайд`,
+                    )
+              div(class=setModifiers('intro__nest', ['content']))
+                p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка новой кровли обходится в приличную сумму денег, занимает большое количество времени.

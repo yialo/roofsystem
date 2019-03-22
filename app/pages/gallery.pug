@@ -30,9 +30,3 @@ block page-main__mutable
             p.gallery-item__caption
               time.gallery-item__time(datetime='2018-02-13') 13.02.2018
               span.s-text.gallery-item__legend= GALLERY_IMAGE_LEGEND
-
-append scripts
-  script.
-    window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
-  script(src='js/slick.js')
-  script(src='js/_gallery-item.js')
