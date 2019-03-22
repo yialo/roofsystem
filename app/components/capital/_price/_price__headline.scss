@@ -1,6 +1,8 @@
 .price__headline {
+  margin-top: 0;
+  margin-bottom: 24px;
+
   @media (min-width: $xl-min-width) {
-    margin-top: 0;
     margin-bottom: 64px;
   }
 }

@@ -1,8 +1,10 @@
 .price__string-wrapper {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  color: $gray-dark;
+
   @media (min-width: $xl-min-width) {
-    font-weight: 700;
     font-size: 64px;
-    letter-spacing: 0.03em;
-    color: $gray-dark;
   }
 }

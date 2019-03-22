@@ -1,0 +1,7 @@
+.price__container {
+  @include padding-hor(15px);
+
+  @media (min-width: $xl-min-width) {
+    @include padding-hor(0);
+  }
+}

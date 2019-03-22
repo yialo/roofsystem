@@ -7,6 +7,10 @@
   text-transform: uppercase;
   color: $gray-dark;
 
+  .titlebar--inner & {
+    margin-bottom: 24px;
+  }
+
   @media (min-width: $xl-min-width) {
     @include large-text();
     text-align: left;

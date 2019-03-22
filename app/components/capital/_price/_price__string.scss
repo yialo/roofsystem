@@ -1,12 +1,16 @@
 .price__string {
-  @media (min-width: $xl-min-width) {
-    &--colored {
-      color: $coral;
-    }
+  &--colored {
+    color: $coral;
+  }
 
+  &--small {
+    font-size: 16px;
+    color: $gray-light;
+  }
+
+  @media (min-width: $xl-min-width) {
     &--small {
       font-size: 24px;
-      color: $gray-light;
     }
   }
 }

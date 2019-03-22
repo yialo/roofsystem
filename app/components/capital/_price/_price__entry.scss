@@ -1,4 +1,18 @@
 .price__entry {
+  &--key {
+    margin-bottom: 8px;
+  }
+
+  &--value {
+    align-self: flex-end;
+    margin-bottom: 16px;
+    margin-left: 0;
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $xl-min-width) {
     $i-ver: "url(\"../img/price__entry--vertical.svg\")";
     $i-hor: "url(\"../img/price__entry--horizontal.svg\")";
@@ -39,7 +53,6 @@
 
     &--value {
       width: 124px;
-      margin-left: 0;
       padding-right: 24px;
     }
   }

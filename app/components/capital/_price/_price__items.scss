@@ -1,5 +1,3 @@
 .price__items {
-  @media (min-width: $xl-min-width) {
-    @include list();
-  }
+  @include list();
 }

@@ -56,5 +56,8 @@ block page-main__mutable
                     (j % 2 === 0 ? 'price__entry--stroked' : null),
                   ])
                     = term
-                  dd(class=setModifiers('price__entry', ['value']))
+                  dd(class=[
+                    setModifiers('price__entry', ['value']),
+                    setLastModifier('price__entry', list, j + 1, false),
+                  ])
                     = `${price} ${PRICE_UNIT}`

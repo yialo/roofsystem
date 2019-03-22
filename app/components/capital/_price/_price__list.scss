@@ -1,13 +1,16 @@
 .price__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  border-top: 2px solid $coral;
+
   @media (min-width: $xl-min-width) {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 24px;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    border-top: 2px solid $coral;
   }
 }
