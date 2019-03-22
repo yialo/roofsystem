@@ -1,9 +1,5 @@
 .page-main__wrapper {
-  flex-grow: 1;
-  background-color: $gray-bg;
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
+  @include page-main-background-s();
 
   &--1 {
     background-image: url("../img/page-main@1920.png");

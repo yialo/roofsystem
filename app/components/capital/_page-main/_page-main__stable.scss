@@ -1,9 +1,9 @@
 .page-main__stable {
-  padding-top: 24px;
+  margin-bottom: 48px;
 
   @media (min-width: $xl-min-width) {
     flex-shrink: 0;
-    padding-top: 0;
+    margin-bottom: 0;
 
     .page-main--index & {
       width: 720px;

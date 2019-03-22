@@ -1,0 +1,7 @@
+@mixin page-main-background-s() {
+  flex-grow: 1;
+  background-color: $gray-bg;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
