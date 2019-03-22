@@ -1,7 +1,9 @@
 .page__container {
-  @include margin-hor();
-  display: flex;
-  flex-direction: column;
-  width: $xl-min-width;
-  min-height: 100vh;
+  @media (min-width: $xl-min-width) {
+    @include margin-hor();
+    display: flex;
+    flex-direction: column;
+    width: $xl-min-width;
+    min-height: 100vh;
+  }
 }

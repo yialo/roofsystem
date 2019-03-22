@@ -1,30 +1,32 @@
 .page-main__stable {
-  flex-shrink: 0;
+  @media (min-width: $xl-min-width) {
+    flex-shrink: 0;
 
-  .page-main--index & {
-    width: 720px;
-    margin-top: 159px;
-    margin-right: auto;
-  }
+    .page-main--index & {
+      width: 720px;
+      margin-top: 159px;
+      margin-right: auto;
+    }
 
-  .page-main--about & {
-    width: 606px;
-    margin-right: 204px;
-  }
+    .page-main--about & {
+      width: 606px;
+      margin-right: 204px;
+    }
 
-  .page-main--gallery & {
-    grid-area: 1 / 1 / 2 / 3;
-    margin-top: 207px;
-  }
+    .page-main--gallery & {
+      grid-area: 1 / 1 / 2 / 3;
+      margin-top: 207px;
+    }
 
-  .page-main--price & {
-    width: 604px;
-    margin-top: 207px;
-    margin-right: auto;
-  }
+    .page-main--price & {
+      width: 604px;
+      margin-top: 207px;
+      margin-right: auto;
+    }
 
-  .page-main--contacts & {
-    width: 606px;
-    margin-right: auto;
+    .page-main--contacts & {
+      width: 606px;
+      margin-right: auto;
+    }
   }
 }

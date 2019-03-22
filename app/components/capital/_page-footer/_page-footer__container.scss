@@ -1,9 +1,11 @@
 .page-footer__container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
-  padding-bottom: 17px;
-  font-size: 14px;
-  line-height: 16px;
-  color: $gray-medium;
+  @media (min-width: $xl-min-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $gray-medium;
+  }
 }

@@ -1,6 +1,8 @@
 .gallery-item__time {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: $gray-light;
+  @media (min-width: $xl-min-width) {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $gray-light;
+  }
 }

@@ -1,25 +1,27 @@
 .gallery__item {
-  pointer-events: none;
+  @media (min-width: $xl-min-width) {
+    pointer-events: none;
 
-  &--1 {
-    grid-area: 1 / 2 / 3 / 4;
-    justify-self: center;
-  }
+    &--1 {
+      grid-area: 1 / 2 / 3 / 4;
+      justify-self: center;
+    }
 
-  &--2 {
-    grid-area: 2 / 3 / 4 / 5;
-    z-index: 1;
-    justify-self: end;
-  }
+    &--2 {
+      grid-area: 2 / 3 / 4 / 5;
+      z-index: 1;
+      justify-self: end;
+    }
 
-  &--3 {
-    grid-area: 3 / 1 / 5 / 3;
-    z-index: 1;
-    justify-self: start;
-  }
+    &--3 {
+      grid-area: 3 / 1 / 5 / 3;
+      z-index: 1;
+      justify-self: start;
+    }
 
-  &--4 {
-    grid-area: 4 / 2 / 5 / 4;
-    justify-self: center;
+    &--4 {
+      grid-area: 4 / 2 / 5 / 4;
+      justify-self: center;
+    }
   }
 }

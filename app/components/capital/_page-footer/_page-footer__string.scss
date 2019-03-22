@@ -1,3 +1,5 @@
 .page-footer__string {
-  text-transform: uppercase;
+  @media (min-width: $xl-min-width) {
+    text-transform: uppercase;
+  }
 }

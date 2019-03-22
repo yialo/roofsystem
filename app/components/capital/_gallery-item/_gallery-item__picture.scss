@@ -1,19 +1,21 @@
 .gallery-item__picture {
-  width: 624px;
+  @media (min-width: $xl-min-width) {
+    width: 624px;
 
-  .gallery-item--1 & {
-    height: 624px;
-  }
+    .gallery-item--1 & {
+      height: 624px;
+    }
 
-  .gallery-item--2 & {
-    height: 408px;
-  }
+    .gallery-item--2 & {
+      height: 408px;
+    }
 
-  .gallery-item--3 & {
-    height: 408px;
-  }
+    .gallery-item--3 & {
+      height: 408px;
+    }
 
-  .gallery-item--4 & {
-    height: 624px;
+    .gallery-item--4 & {
+      height: 624px;
+    }
   }
 }

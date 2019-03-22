@@ -1,24 +1,26 @@
 .page-main__mutable {
-  .page-main--index & {
-    width: 788px;
-    margin-top: 256px;
-  }
+  @media (min-width: $xl-min-width) {
+    .page-main--index & {
+      width: 788px;
+      margin-top: 256px;
+    }
 
-  .page-main--about & {
-    width: 600px;
-  }
+    .page-main--about & {
+      width: 600px;
+    }
 
-  .page-main--gallery & {
-    grid-area: 1 / 2 / 2 / 4;
-    margin-top: 134px;
-  }
+    .page-main--gallery & {
+      grid-area: 1 / 2 / 2 / 4;
+      margin-top: 134px;
+    }
 
-  .page-main--price & {
-    width: 786px;
-    margin-top: 202px;
-  }
+    .page-main--price & {
+      width: 786px;
+      margin-top: 202px;
+    }
 
-  .page-main--contacts & {
-    width: 784px;
+    .page-main--contacts & {
+      width: 784px;
+    }
   }
 }

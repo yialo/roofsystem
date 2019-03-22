@@ -1,15 +1,17 @@
 .intro__number {
-  position: absolute;
-  bottom: -4px;
-  font-weight: 700;
-  font-size: 16px;
-  color: $gray-dark;
+  @media (min-width: $xl-min-width) {
+    position: absolute;
+    bottom: -4px;
+    font-weight: 700;
+    font-size: 16px;
+    color: $gray-dark;
 
-  &--current {
-    left: 0;
-  }
+    &--current {
+      left: 0;
+    }
 
-  &--another {
-    right: 0;
+    &--another {
+      right: 0;
+    }
   }
 }

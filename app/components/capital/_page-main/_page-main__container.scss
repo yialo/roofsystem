@@ -1,29 +1,31 @@
 .page-main__container {
-  display: flex;
+  @media (min-width: $xl-min-width) {
+    display: flex;
 
-  .page-main--index & {
-    padding-bottom: 440px;
-  }
+    .page-main--index & {
+      padding-bottom: 440px;
+    }
 
-  .page-main--about & {
-    padding-top: 207px;
-    padding-bottom: 430px;
-  }
+    .page-main--about & {
+      padding-top: 207px;
+      padding-bottom: 430px;
+    }
 
-  .page-main--gallery & {
-    display: grid;
-    grid-template: 1fr / 494px 110px 1fr;
-    justify-content: start;
-    width: auto;
-    padding-bottom: 578px;
-  }
+    .page-main--gallery & {
+      display: grid;
+      grid-template: 1fr / 494px 110px 1fr;
+      justify-content: start;
+      width: auto;
+      padding-bottom: 578px;
+    }
 
-  .page-main--price & {
-    padding-bottom: 474px;
-  }
+    .page-main--price & {
+      padding-bottom: 474px;
+    }
 
-  .page-main--contacts & {
-    padding-top: 207px;
-    padding-bottom: 663px;
+    .page-main--contacts & {
+      padding-top: 207px;
+      padding-bottom: 663px;
+    }
   }
 }

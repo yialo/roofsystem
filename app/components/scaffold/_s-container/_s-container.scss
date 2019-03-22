@@ -1,5 +1,7 @@
 .s-container {
-  width: 1600px;
-  margin-left: 162px;
-  margin-right: auto;
+  @media (min-width: $xl-min-width) {
+    width: 1600px;
+    margin-left: 162px;
+    margin-right: auto;
+  }
 }

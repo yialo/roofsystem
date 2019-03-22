@@ -1,3 +1,5 @@
 .gallery-item__legend {
-  letter-spacing: 0.03em;
+  @media (min-width: $xl-min-width) {
+    letter-spacing: 0.03em;
+  }
 }

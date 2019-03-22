@@ -1,3 +1,5 @@
 .contacts__string {
-  color: $coral;
+  @media (min-width: $xl-min-width) {
+    color: $coral;
+  }
 }

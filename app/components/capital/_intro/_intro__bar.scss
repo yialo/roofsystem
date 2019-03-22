@@ -1,4 +1,6 @@
 .intro__bar {
-  height: 4px;
-  background-color: $coral;
+  @media (min-width: $xl-min-width) {
+    height: 4px;
+    background-color: $coral;
+  }
 }

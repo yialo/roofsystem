@@ -1,40 +1,42 @@
 .titlebar__link {
-  $link-modifiers: (about, gallery, price,);
+  @media (min-width: $xl-min-width) {
+    $link-modifiers: (about, gallery, price,);
 
-  position: relative;
-  z-index: 0;
-  padding-left: 66px;
-  padding-right: 14px;
-  font-size: 24px;
-  line-height: 72px;
-  color: $gray-dark;
+    position: relative;
+    z-index: 0;
+    padding-left: 66px;
+    padding-right: 14px;
+    font-size: 24px;
+    line-height: 72px;
+    color: $gray-dark;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 18px;
-    left: 6px;
-    width: 32px;
-    height: 32px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 18px;
+      left: 6px;
+      width: 32px;
+      height: 32px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 23px;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 8px;
-    background-color: $coral;
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 23px;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 8px;
+      background-color: $coral;
+    }
 
-  @each $modifier in $link-modifiers {
-    &--#{$modifier} {
-      &::before {
-        background-image: url("../img/titlebar__link--#{$modifier}.svg");
+    @each $modifier in $link-modifiers {
+      &--#{$modifier} {
+        &::before {
+          background-image: url("../img/titlebar__link--#{$modifier}.svg");
+        }
       }
     }
   }

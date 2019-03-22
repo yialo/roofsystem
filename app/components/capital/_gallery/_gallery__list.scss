@@ -1,6 +1,8 @@
 .gallery__list {
-  @include list();
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 496px minmax(408px, auto) minmax(280px, auto) minmax(720px, auto);
+  @media (min-width: $xl-min-width) {
+    @include list();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 496px minmax(408px, auto) minmax(280px, auto) minmax(720px, auto);
+  }
 }

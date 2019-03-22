@@ -1,4 +1,6 @@
 .titlebar__links {
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: $xl-min-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

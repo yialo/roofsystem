@@ -1,19 +1,21 @@
 .navigation-item {
-  padding-bottom: 21px;
-  font-size: 18px;
-  color: $gray-dark;
+  @media (min-width: $xl-min-width) {
+    padding-bottom: 21px;
+    font-size: 18px;
+    color: $gray-dark;
 
-  &--active {
-    position: relative;
+    &--active {
+      position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 8px;
-      height: 4px;
-      background-color: $gray-dark;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 8px;
+        height: 4px;
+        background-color: $gray-dark;
+      }
     }
   }
 }

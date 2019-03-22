@@ -1,4 +1,6 @@
 .contacts__container {
-  display: flex;
-  flex-wrap: wrap;
+  @media (min-width: $xl-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

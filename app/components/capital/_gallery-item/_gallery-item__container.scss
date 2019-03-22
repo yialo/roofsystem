@@ -1,3 +1,5 @@
 .gallery-item__container {
-  pointer-events: all;
+  @media (min-width: $xl-min-width) {
+    pointer-events: all;
+  }
 }

@@ -1,3 +1,5 @@
 .titlebar__lead-wrapper {
-  margin-bottom: 24px;
+  @media (min-width: $xl-min-width) {
+    margin-bottom: 24px;
+  }
 }

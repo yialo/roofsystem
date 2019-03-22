@@ -1,4 +1,6 @@
 .logo__link {
-  width: 88px;
-  height: 57px;
+  @media (min-width: $xl-min-width) {
+    width: 88px;
+    height: 57px;
+  }
 }

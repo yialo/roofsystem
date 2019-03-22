@@ -1,11 +1,15 @@
 html {
-  box-sizing: border-box;
+  @media (min-width: $xl-min-width) {
+    box-sizing: border-box;
+  }
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  @media (min-width: $xl-min-width) {
+    box-sizing: inherit;
+  }
 }
 
 body {
@@ -21,15 +25,19 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  @media (min-width: $xl-min-width) {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 img,
 svg,
 picture,
 video {
-  display: block;
+  @media (min-width: $xl-min-width) {
+    display: block;
+  }
 }
 
 h1,
@@ -38,10 +46,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: inherit;
+  @media (min-width: $xl-min-width) {
+    font-weight: inherit;
+  }
 }
 
 button {
-  display: block;
-  cursor: pointer;
+  @media (min-width: $xl-min-width) {
+    display: block;
+    cursor: pointer;
+  }
 }

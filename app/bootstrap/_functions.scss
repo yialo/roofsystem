@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 // Bootstrap functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
@@ -7,6 +9,7 @@
 @mixin _assert-ascending($map, $map-name) {
   $prev-key: null;
   $prev-num: null;
+
   @each $key, $num in $map {
     @if $prev-num == null or unit($num) == "%" {
       // Do nothing
@@ -25,6 +28,7 @@
 @mixin _assert-starts-at-zero($map, $map-name: "$grid-breakpoints") {
   $values: map-values($map);
   $first-value: nth($values, 1);
+
   @if $first-value != 0 {
     @warn "First breakpoint in #{$map-name} must start at 0, but starts at #{$first-value}.";
   }

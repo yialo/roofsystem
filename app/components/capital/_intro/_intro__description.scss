@@ -1,3 +1,5 @@
 .intro__description {
-  width: 600px;
+  @media (min-width: $xl-min-width) {
+    width: 600px;
+  }
 }

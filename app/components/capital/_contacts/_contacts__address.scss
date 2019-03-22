@@ -1,3 +1,5 @@
 .contacts__address {
-  letter-spacing: 0.04em;
+  @media (min-width: $xl-min-width) {
+    letter-spacing: 0.04em;
+  }
 }
