@@ -1,0 +1,26 @@
+.navigation-item__link {
+  @include media-breakpoint-down(md) {
+    @include padding-hor(30px);
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      background-color: $gray-air;
+    }
+
+    .navigation-item--last & {
+      box-shadow: none;
+    }
+
+    .navigation-item--current & {
+      color: $gray-air;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

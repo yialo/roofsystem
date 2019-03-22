@@ -1,6 +1,7 @@
 .navigation__list {
+  @include list();
+
   @media (min-width: $xl-min-width) {
-    @include list();
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

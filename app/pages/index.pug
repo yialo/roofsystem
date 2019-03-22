@@ -4,7 +4,7 @@ block page-id
   - const pageId = 'index';
 
 block page-main
-  div(class=[setModifiers('page-main', [pageId])])
+  div(class=setModifiers('page-main', [pageId]))
     -
       const INTRO_SLIDES = [
         ['кровли', 'первый'],

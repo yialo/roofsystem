@@ -11,6 +11,7 @@
             - const isCurrent = (id === pageId);
             li(class=[
               'navigation-item',
+              id === 'contacts' ? 'navigation-item--last' : null,
               isCurrent ? 'navigation-item--current' : null,
               'navigation__item',
             ]): a.navigation-item__link(href=(!isCurrent ? `${id}.html` : null))= label

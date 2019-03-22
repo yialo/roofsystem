@@ -1,4 +1,9 @@
 .page-header__container {
+  @include media-breakpoint-down(md) {
+    position: relative;
+    z-index: 1;
+  }
+
   @media (min-width: $xl-min-width) {
     display: flex;
   }

@@ -4,10 +4,6 @@
     margin-bottom: 11px;
   }
 
-  &--navigation {
-    display: none;
-  }
-
   &--tel {
     margin-top: 21px;
     margin-bottom: 21px;
@@ -20,7 +16,21 @@
     margin-bottom: 11px;
   }
 
-  @media (min-width: 992px) {
+  @include media-breakpoint-down(md) {
+    &--navigation {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 64px;
+      display: none;
+
+      .is-navigation-shown & {
+        display: block;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
     &--button {
       display: none;
     }
