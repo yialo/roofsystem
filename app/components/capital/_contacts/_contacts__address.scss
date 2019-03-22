@@ -1,5 +1,9 @@
 .contacts__address {
-  @media (min-width: $xl-min-width) {
-    letter-spacing: 0.04em;
+  line-height: 1;
+  letter-spacing: 0.04em;
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+    line-height: 1.5;
   }
 }

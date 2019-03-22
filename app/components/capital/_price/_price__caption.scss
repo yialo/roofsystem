@@ -1,9 +1,7 @@
 .price__caption {
-  @media (min-width: $xl-min-width) {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 24px;
-    letter-spacing: 0.03em;
-    color: $gray-dark;
-  }
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  color: $gray-dark;
 }

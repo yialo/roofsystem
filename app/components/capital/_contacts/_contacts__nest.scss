@@ -1,4 +1,26 @@
 .contacts__nest {
+  &--tel {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &--emails {
+    padding-left: 30px;
+    margin-bottom: 24px;
+  }
+
+  &--address {
+    padding-left: 30px;
+  }
+
+  &--map {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 240px;
+    margin-top: 32px;
+  }
+
   @media (min-width: $xl-min-width) {
     &--tel {
       width: 100%;
@@ -21,7 +43,6 @@
     }
 
     &--map {
-      width: 100%;
       height: 408px;
       margin-top: 80px;
     }
