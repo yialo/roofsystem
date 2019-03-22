@@ -1,0 +1,14 @@
+head
+  meta(charset='utf-8')
+  title #{pageTitle} | #{SITE_TITLE}
+  include _head_general_meta
+  include _head_favicons
+  include _head_fonts
+  if pageId === 'gallery'
+    link(
+      rel='preload',
+      href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+      as='script',
+    )
+    link(rel='preload', href='js/slick.js', as='script')
+  link(rel='stylesheet', href='css/main.min.css')

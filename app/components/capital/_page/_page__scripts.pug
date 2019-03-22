@@ -1,0 +1,16 @@
+script(src='js/picturefill.js')
+script(src='js/_page-header.js')
+case pageId
+  when 'index'
+    script(src='js/_intro.js')
+  when 'gallery'
+    script.
+      window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
+    script(src='js/slick.js')
+    script(src='js/_gallery-item.js')
+  when 'contacts'
+    script(
+      src='https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU',
+      type='text/javascript',
+    )
+    script(src='js/_contacts__map.js')
