@@ -1,5 +1,8 @@
 .gallery__item {
+  @include margin-bottom-last(32px);
+
   @media (min-width: $xl-min-width) {
+    @include margin-bottom-last(0);
     pointer-events: none;
 
     &--1 {

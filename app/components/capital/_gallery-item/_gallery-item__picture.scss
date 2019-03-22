@@ -1,4 +1,22 @@
 .gallery-item__picture {
+  width: 290px;
+
+  .gallery-item--1 & {
+    height: 290px;
+  }
+
+  .gallery-item--2 & {
+    height: calc(290px * 408 / 624);
+  }
+
+  .gallery-item--3 & {
+    height: calc(290px * 408 / 624);
+  }
+
+  .gallery-item--4 & {
+    height: 290px;
+  }
+
   @media (min-width: $xl-min-width) {
     width: 624px;
 

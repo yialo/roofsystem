@@ -16,6 +16,7 @@ block page-main__mutable
         li(class=[
           setModifiers('gallery-item', [number]),
           setModifiers('gallery__item', [number]),
+          setLastModifier('gallery__item', GALLERY_PICTURE_AMOUNTS, number),
         ])
           .gallery-item__container
             .gallery-item__pictures

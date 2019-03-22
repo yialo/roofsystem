@@ -1,9 +1,7 @@
 .gallery-item__caption {
-  @media (min-width: $xl-min-width) {
-    display: flex;
-    flex-direction: column;
-    width: 174px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 174px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
