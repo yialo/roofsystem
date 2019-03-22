@@ -1,8 +1,10 @@
 .about__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: $gray-light;
+
   @media (min-width: $xl-min-width) {
     @include large-text();
-    margin-top: 0;
     margin-bottom: 40px;
-    color: $gray-light;
   }
 }

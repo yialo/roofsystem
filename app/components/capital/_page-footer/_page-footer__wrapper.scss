@@ -1,0 +1,8 @@
+.page-footer__inner-wrapper {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $xl-min-width) {
+    display: block;
+  }
+}

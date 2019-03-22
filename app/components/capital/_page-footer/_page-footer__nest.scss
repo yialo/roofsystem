@@ -1,0 +1,11 @@
+.page-footer__nest {
+  &--copyright {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    &--copyright {
+      margin-bottom: 8px;
+    }
+  }
+}

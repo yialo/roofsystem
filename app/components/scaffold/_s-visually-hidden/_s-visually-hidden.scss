@@ -1,11 +1,9 @@
 .s-visually-hidden {
-  @media (min-width: $xl-min-width) {
-    @at-root {
-      &:not(:focus):not(:active),
-      input[type="checkbox"]#{&},
-      input[type="radio"]#{&} {
-        @include visually-hiding();
-      }
+  @at-root {
+    &:not(:focus):not(:active),
+    input[type="checkbox"]#{&},
+    input[type="radio"]#{&} {
+      @include visually-hiding();
     }
   }
 }

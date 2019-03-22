@@ -1,9 +1,8 @@
 .page-footer__link {
-  @media (min-width: $xl-min-width) {
-    text-decoration: underline;
+  display: block;
+  text-decoration: underline;
 
-    &:hover {
-      text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
   }
 }
