@@ -1,0 +1,41 @@
+.container {
+  @media (min-width: $xl-min-width) {
+    width: auto;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.row {
+  @media (min-width: $xl-min-width) {
+    display: block;
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.col {
+  @media (min-width: $xl-min-width) {
+    position: static;
+    flex: 0 1 auto;
+    width: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @media (min-width: $xl-min-width) {
+      position: static;
+      flex: 0 1 auto;
+      width: auto;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

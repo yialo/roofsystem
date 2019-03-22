@@ -1,4 +1,8 @@
 .page-header__nest {
+  &--navigation {
+    display: none;
+  }
+
   @media (min-width: $xl-min-width) {
     &--logo {
       margin-top: 12px;

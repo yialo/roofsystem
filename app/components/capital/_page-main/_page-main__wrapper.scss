@@ -1,25 +1,25 @@
 .page-main__wrapper {
+  &--1 {
+    background-image: url("../img/page-main@1920.png");
+
+    .is-second-slide-shown & {
+      display: none;
+    }
+  }
+
+  &--2 {
+    display: none;
+    background-image: url("../img/page-main--index@1920.png");
+
+    .is-second-slide-shown & {
+      display: block;
+    }
+  }
+
   @media (min-width: $xl-min-width) {
     flex-grow: 1;
     background-color: $gray-bg;
     background-position-y: bottom;
     background-repeat: no-repeat;
-
-    &--1 {
-      background-image: url("../img/page-main@1920.png");
-
-      .is-second-slide-shown & {
-        display: none;
-      }
-    }
-
-    &--2 {
-      display: none;
-      background-image: url("../img/page-main--index@1920.png");
-
-      .is-second-slide-shown & {
-        display: block;
-      }
-    }
   }
 }

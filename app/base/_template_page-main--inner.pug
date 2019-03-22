@@ -1,11 +1,11 @@
 extends _template_html
 
 block page-main
-  div(class=setModifiers('page-main', [pageId]))
-    .s-container.page-main__container
-      .page-main__stable
+  div(class=setModifiers('page-main', [pageId])).container
+    .s-container.page-main__container.row
+      .page-main__stable.col-12
         div(class=setModifiers('titlebar', ['inner']))
           h1.titlebar__lead= pageTitle
           +titlebar__links()
-      .page-main__mutable
+      .page-main__mutable.col-12
         block page-main__mutable
