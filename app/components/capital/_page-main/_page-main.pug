@@ -1,34 +1,27 @@
 - const isIndex = (pageId === 'index');
-div(class=[
-  setModifiers('page-main', [pageId]),
-  isIndex ? null : 'container',
-])
-  mixin page-main__container()
-    .s-container.page-main__container.row
-      .page-main__stable.col-12
-        - const titlebarModifier = (isIndex ? 'index' : 'inner');
-        div(class=setModifiers('titlebar', [titlebarModifier]))
-          if isIndex
-            h1.titlebar__lead= pageTitle
-          else
-            h1.titlebar__heading= SITE_TITLE
-            .titlebar__lead-wrapper
-              p(class=setModifiers('titlebar__lead', [number]))
-                | Устройство, монтаж и ремонт #{product}
-          +titlebar__links()
-      .page-main__mutable.col-12
-        block page-main__mutable
+div(class=[setModifiers('page-main', [pageId])])
+  mixin page-main__wrapper()
+    div(class=[
+      'page-main__wrapper',
+      isIndex ? `page-main__wrapper--${attributes.modifier}` : null,
+    ]).container
+      .s-container.page-main__container.row
+        .page-main__stable.col-12
+          div(class=setModifiers('titlebar', [isIndex ? 'index' : 'inner']))
+            if isIndex
+              h1.titlebar__heading= SITE_TITLE
+              .titlebar__lead-wrapper
+                p(class=setModifiers('titlebar__lead', [number]))
+                  | Устройство, монтаж и ремонт #{product}
+            else
+              h1.titlebar__lead= pageTitle
+            +titlebar__links()
+        .page-main__mutable.col-12
+          block page-main__mutable
   if isIndex
-    -
-      const INTRO_SLIDES = [
-        ['кровли', 'первый'],
-        ['фасада', 'второй'],
-      ];
+    - const INTRO_SLIDES = [['кровли', 'первый'], ['фасада', 'второй']];
     each slide, i in INTRO_SLIDES
-      -
-        const number = i + 1;
-        const [product, numeral] = slide;
-      div(class=setModifiers('page-main__wrapper', [number])).container
-        +page-main__container()
+      - const [product, numeral] = slide;
+      +page-main__wrapper(modifier=(i + 1))
   else
-    +page-main__container()
+    +page-main__wrapper()
