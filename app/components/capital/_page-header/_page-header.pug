@@ -3,7 +3,12 @@
     div(class=setModifiers('page-header__nest', ['logo'])).col-3
       .logo
         a.logo__link(href=(pageId !== 'index' ? 'index.html' : null))
-          img.logo__image(src='img/logo.svg', width='88', height='57', alt=SITE_TITLE)
+          img.logo__image(
+            src='img/logo.svg',
+            width='50',
+            height='32',
+            alt=SITE_TITLE
+          )
     nav(class=setModifiers('page-header__nest', ['navigation']))
       .navigation
         ul.navigation__list
