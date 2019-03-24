@@ -19,10 +19,10 @@ block page-main__mutable
           setLastModifier('gallery__item', GALLERY_PICTURE_AMOUNTS, number),
         ])
           .gallery-item__container
-            .gallery-item__pictures
+            div(class=setModifiers('gallery-item__box', ['pictures']))
               - for (let j = 1; j <= amount; j += 1)
                 .gallery-item__wrapper
-                  picture.gallery-item__picture
+                  picture(class=setModifiers('gallery-item__box', ['picture']))
                     img.gallery-item__image(
                       src=`img/gallery-item--${number}__image-${j}.jpg`,
                       alt=GALLERY_IMAGE_LEGEND,

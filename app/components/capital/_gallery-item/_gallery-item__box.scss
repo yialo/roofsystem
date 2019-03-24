@@ -1,0 +1,24 @@
+.gallery-item__box {
+  @mixin gallery-item-size($base-width) {
+    $height-outermost: $base-width;
+    $height-middle: $base-width * 408 / 624;
+
+    width: $base-width;
+
+    @for $i from 1 through 4 {
+      .gallery-item--#{$i} & {
+        height: if(index((2, 3), $i) == null, $height-outermost, $height-middle);
+      }
+    }
+  }
+
+  @include gallery-item-size(290px);
+
+  &--pictures {
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    @include gallery-item-size(624px);
+  }
+}

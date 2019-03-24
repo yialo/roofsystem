@@ -13,6 +13,6 @@ $(document).ready(function(){
   };
 
   for (let i = 1; i <= 4; i++) {
-    $(`.gallery-item--${i} .gallery-item__pictures`).slick(slickSettings);
+    $(`.gallery-item--${i} .gallery-item__box--pictures`).slick(slickSettings);
   }
 });
