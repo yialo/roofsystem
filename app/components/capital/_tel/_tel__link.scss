@@ -3,7 +3,7 @@
 
   .tel--small & {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .tel--large & {
@@ -12,16 +12,24 @@
   }
 
   @include media-breakpoint-up(sm) {
-    .tel-small & {
+    .tel--small & {
+      font-size: 28px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .tel--small & {
       font-size: 32px;
     }
   }
 
-  @media (min-width: $xl-min-width) {
-    .tel-small & {
+  @include media-breakpoint-up(lg) {
+    .tel--small & {
       font-size: 20px;
     }
+  }
 
+  @include media-breakpoint-up(xxl) {
     .tel--large & {
       font-size: 64px;
       line-height: 72px;

@@ -12,7 +12,7 @@
     margin-bottom: 24px;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     font-size: 64px;
     line-height: 1;
     letter-spacing: 0.03em;

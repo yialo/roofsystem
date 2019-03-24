@@ -9,7 +9,7 @@
             height='32',
             alt=SITE_TITLE
           )
-    nav(class=setModifiers('page-header__nest', ['navigation']))
+    nav(class=setModifiers('page-header__nest', ['navigation'])).col-9.col-sm-10.col-lg-5
       .navigation
         ul.navigation__list
           each label, id in PAGES
@@ -20,9 +20,9 @@
               isCurrent ? 'navigation-item--current' : null,
               'navigation__item',
             ]): a.navigation-item__link(href=(!isCurrent ? `${id}.html` : null))= label
-    div(class=setModifiers('page-header__nest', ['tel'])).col-6
+    div(class=setModifiers('page-header__nest', ['tel'])).col-6.col-sm-7.col-lg-4
       +tel()(modifier='small')
-    div(class=setModifiers('page-header__nest', ['button'])).col-3
+    div(class=setModifiers('page-header__nest', ['button'])).col-3.col-sm-2
       .navigation-control
         -
           const NAVIGATION_CONTROL_BUTTONS = [

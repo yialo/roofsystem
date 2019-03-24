@@ -2,7 +2,7 @@
   @include padding-hor();
   margin-bottom: 16px;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     margin-bottom: 24px;
   }
 }

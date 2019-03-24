@@ -41,7 +41,7 @@
     }
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     width: auto;
     font-size: 24px;
     line-height: 72px;

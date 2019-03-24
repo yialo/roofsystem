@@ -8,7 +8,7 @@
   text-transform: uppercase;
   color: $gray-light;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     text-align: left;
   }
 }

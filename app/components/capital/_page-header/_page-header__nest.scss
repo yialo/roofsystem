@@ -1,19 +1,14 @@
 .page-header__nest {
   &--logo {
-    margin-top: 12px;
-    margin-bottom: 11px;
+    align-self: center;
   }
 
   &--tel {
-    margin-top: 21px;
-    margin-bottom: 21px;
-    padding-left: 0;
-    padding-right: 0;
+    align-self: center;
   }
 
   &--button {
-    margin-top: 12px;
-    margin-bottom: 11px;
+    align-self: center;
   }
 
   @include media-breakpoint-down(md) {
@@ -21,7 +16,7 @@
       position: absolute;
       z-index: 1;
       top: 0;
-      right: 64px;
+      left: 0;
       display: none;
 
       .is-navigation-shown & {
@@ -40,8 +35,23 @@
     &--button {
       display: none;
     }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &--logo {
+      align-self: stretch;
+      margin-right: 720px;
+    }
+
+    &--navigation {
+      align-self: stretch;
+      width: 493px;
+      margin-top: 30px;
+      margin-bottom: 11px;
+    }
 
     &--tel {
+      align-self: stretch;
       position: static;
       flex: 0 1 auto;
       width: auto;
@@ -50,18 +60,6 @@
       margin-left: auto;
       padding-right: 0;
       padding-left: 0;
-    }
-  }
-
-  @media (min-width: $xl-min-width) {
-    &--logo {
-      margin-right: 720px;
-    }
-
-    &--navigation {
-      width: 493px;
-      margin-top: 30px;
-      margin-bottom: 11px;
     }
   }
 }
