@@ -4,7 +4,7 @@
   line-height: 40px;
   letter-spacing: 0.04em;
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(xl) {
     font-size: 18px;
   }
 }

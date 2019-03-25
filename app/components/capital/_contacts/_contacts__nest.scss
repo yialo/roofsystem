@@ -49,11 +49,19 @@
     }
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(xl) {
     &--tel {
       margin-bottom: 78px;
     }
 
+    &--map {
+      position: static;
+      height: 300px;
+      margin-top: 80px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
     &--emails {
       width: 300px;
       margin-right: 24px;
@@ -64,9 +72,7 @@
     }
 
     &--map {
-      position: static;
       height: 408px;
-      margin-top: 80px;
     }
   }
 }

@@ -29,11 +29,18 @@
     }
   }
 
+  @include media-breakpoint-up(xl) {
+    .tel--large & {
+      font-size: 48px;
+      line-height: 1.1;
+      letter-spacing: 0.03em;
+    }
+  }
+
   @include media-breakpoint-up(xxl) {
     .tel--large & {
       font-size: 64px;
       line-height: 72px;
-      letter-spacing: 0.03em;
     }
   }
 }

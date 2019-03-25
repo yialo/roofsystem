@@ -26,6 +26,11 @@
       padding-top: 120px;
       padding-bottom: 360px;
     }
+
+    .page-main--contacts & {
+      padding-top: 120px;
+      padding-bottom: 400px;
+    }
   }
 
   @include media-breakpoint-up(xxl) {

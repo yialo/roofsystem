@@ -9,7 +9,7 @@
     align-items: stretch;
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(xl) {
     @include padding-hor(0);
   }
 }
