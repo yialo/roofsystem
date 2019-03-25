@@ -27,6 +27,14 @@
       padding-bottom: 360px;
     }
 
+    .page-main--gallery & {
+      display: grid;
+      grid-template: 1fr / 25% 10% 1fr;
+      justify-content: start;
+      width: auto;
+      padding-bottom: 400px;
+    }
+
     .page-main--price & {
       padding-top: 140px;
       padding-bottom: 320px;
@@ -51,8 +59,6 @@
     .page-main--gallery & {
       display: grid;
       grid-template: 1fr / 494px 110px 1fr;
-      justify-content: start;
-      width: auto;
       padding-bottom: 578px;
     }
 

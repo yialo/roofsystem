@@ -17,7 +17,7 @@
     justify-content: space-between;
 
     @include media-breakpoint-down(xl) {
-      .titlebar--price & {
+      .titlebar--narrow-xl & {
         display: flex;
         flex-direction: column;
       }

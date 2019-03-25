@@ -11,6 +11,12 @@
       width: 45%;
     }
 
+    .page-main--gallery & {
+      @include padding-hor(0);
+      grid-area: 1 / 2 / 2 / 4;
+      margin-top: 80px;
+    }
+
     .page-main--price & {
       width: 60%;
       padding-left: 0;
@@ -35,7 +41,6 @@
     }
 
     .page-main--gallery & {
-      grid-area: 1 / 2 / 2 / 4;
       margin-top: 134px;
     }
 

@@ -7,7 +7,7 @@ mixin page-main__wrapper(productName)
       .page-main__stable.col-12
         div(class=[
           setModifiers('titlebar', [isIndex ? 'inner' : 'inner']),
-          pageId === 'price' ? 'titlebar--price' : null,
+          ['gallery', 'price'].includes(pageId) ? 'titlebar--narrow-xl' : null,
         ])
           if isIndex
             h1.titlebar__heading= SITE_TITLE
