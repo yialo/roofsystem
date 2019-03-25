@@ -64,5 +64,12 @@
     &--1 {
       margin-right: 0;
     }
+
+    @include media-breakpoint-down(xl) {
+      .titlebar--price & {
+        align-self: flex-start;
+        width: 100%;
+      }
+    }
   }
 }

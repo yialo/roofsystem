@@ -14,7 +14,7 @@
     }
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(xl) {
     &--small {
       font-size: 24px;
     }
