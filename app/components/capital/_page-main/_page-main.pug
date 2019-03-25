@@ -8,13 +8,7 @@ div(class=[setModifiers('page-main', [pageId])])
       .s-container.page-main__container.row
         .page-main__stable.col-12
           div(class=setModifiers('titlebar', [isIndex ? 'index' : 'inner']))
-            if isIndex
-              h1.titlebar__heading= SITE_TITLE
-              .titlebar__lead-wrapper
-                p(class=setModifiers('titlebar__lead', [number]))
-                  | Устройство, монтаж и ремонт #{product}
-            else
-              h1.titlebar__lead= pageTitle
+            block
             +titlebar__links()
         .page-main__mutable.col-12
           block page-main__mutable
@@ -22,6 +16,11 @@ div(class=[setModifiers('page-main', [pageId])])
     - const INTRO_SLIDES = [['кровли', 'первый'], ['фасада', 'второй']];
     each slide, i in INTRO_SLIDES
       - const [product, numeral] = slide;
-      +page-main__wrapper(modifier=(i + 1))
+      +page-main__wrapper(slide)(modifier=(i + 1))
+        h1.titlebar__heading= SITE_TITLE
+        .titlebar__lead-wrapper
+          p(class=setModifiers('titlebar__lead', [number]))
+            | Устройство, монтаж и ремонт #{product}
   else
     +page-main__wrapper()
+      h1.titlebar__lead= pageTitle

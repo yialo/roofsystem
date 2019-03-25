@@ -2,8 +2,13 @@
   display: flex;
   flex-direction: column;
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(md) {
+    @include padding-hor(15px);
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    @include padding-hor(0);
   }
 }

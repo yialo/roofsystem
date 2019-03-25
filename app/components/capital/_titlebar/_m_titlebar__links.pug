@@ -4,13 +4,13 @@ mixin titlebar__links()
       const toAbout = ['about', 'Читать о компании'];
       const toGallery = ['gallery', 'Посмотреть галерею'];
       const toPrice = ['price', 'Узнать цены'];
-      let set;
-      if (['index', 'about', 'contacts'].includes(pageId)) {
-        set = [toPrice, toGallery];
-      } else if (pageId === 'gallery') {
+      let set = [];
+      if (pageId === 'gallery') {
         set = [toPrice, toAbout];
-      } else {
+      } else if (pageId === 'price') {
         set = [toGallery, toAbout];
+      } else {
+        set = [toPrice, toGallery];
       }
       return set;
     };

@@ -14,7 +14,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 8px;
     left: 6px;
     width: 32px;
     height: 32px;
@@ -25,7 +25,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 6px;
+    bottom: 14px;
     left: 0;
     z-index: -1;
     width: 100%;
