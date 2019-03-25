@@ -13,7 +13,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     $i-ver: "url(\"../img/price__entry--vertical.svg\")";
     $i-hor: "url(\"../img/price__entry--horizontal.svg\")";
     $p-start: "0.5px";

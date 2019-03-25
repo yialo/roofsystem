@@ -19,7 +19,7 @@
     height: 20px;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     &::before {
       height: 40px;
     }

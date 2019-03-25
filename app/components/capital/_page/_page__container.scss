@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     width: $xl-min-width;
   }
 }

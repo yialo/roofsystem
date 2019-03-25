@@ -9,7 +9,7 @@
   letter-spacing: 0.03em;
   border-top: 2px solid $coral;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     flex-direction: row;
     flex-wrap: wrap;
   }

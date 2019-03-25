@@ -4,12 +4,7 @@
   }
 
   &--emails {
-    padding-left: 30px;
     margin-bottom: 24px;
-  }
-
-  &--address {
-    padding-left: 30px;
   }
 
   &--map {
@@ -20,7 +15,7 @@
     margin-top: 32px;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     &--tel {
       width: 100%;
       margin-bottom: 78px;

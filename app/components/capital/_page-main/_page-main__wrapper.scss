@@ -25,7 +25,7 @@
     background-image: url("../img/page-main__wrapper--about@1920.png");
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     background-size: 100% auto;
   }
 }

@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:

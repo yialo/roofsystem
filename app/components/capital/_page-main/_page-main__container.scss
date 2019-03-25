@@ -18,7 +18,7 @@
     padding-bottom: 280px;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     display: flex;
     padding-top: 0;
 

@@ -14,7 +14,7 @@
   }
 
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     bottom: -4px;
 
     &--current {

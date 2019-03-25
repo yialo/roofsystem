@@ -1,5 +1,5 @@
 .gallery-item__container {
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     pointer-events: all;
   }
 }

@@ -8,7 +8,13 @@
     color: $gray-light;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(sm) {
+    &--small {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
     &--small {
       font-size: 24px;
     }

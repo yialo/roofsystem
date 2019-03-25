@@ -15,10 +15,14 @@
   @include gallery-item-size(290px);
 
   &--pictures {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     @include gallery-item-size(624px);
+
+    &--pictures {
+      margin-bottom: 28px;
+    }
   }
 }

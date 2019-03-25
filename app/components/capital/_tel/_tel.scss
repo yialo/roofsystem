@@ -1,7 +1,11 @@
 .tel {
-  text-align: center;
+  &--small {
+    text-align: center;
+  }
 
-  @media (min-width: $xl-min-width) {
-    text-align: left;
+  @include media-breakpoint-up(xxl) {
+    &--small {
+      text-align: left;
+    }
   }
 }

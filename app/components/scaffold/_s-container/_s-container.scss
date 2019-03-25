@@ -1,5 +1,5 @@
 .s-container {
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     width: 1600px;
     margin-left: 162px;
     margin-right: auto;

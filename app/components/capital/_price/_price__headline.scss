@@ -2,7 +2,7 @@
   margin-top: 0;
   margin-bottom: 24px;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     margin-bottom: 64px;
   }
 }

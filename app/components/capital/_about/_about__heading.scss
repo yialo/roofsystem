@@ -4,7 +4,7 @@
   font-size: 32px;
   color: $gray-light;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     margin-bottom: 40px;
     font-size: 64px;
     line-height: 72px;

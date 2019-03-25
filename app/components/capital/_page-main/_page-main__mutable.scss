@@ -1,5 +1,5 @@
 .page-main__mutable {
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     .page-main--index & {
       width: 788px;
       margin-top: 256px;

@@ -3,7 +3,7 @@
     margin-bottom: 8px;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     &--copyright {
       margin-bottom: 8px;
     }

@@ -5,7 +5,7 @@
   line-height: 16px;
   color: $gray-medium;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     display: flex;
     justify-content: space-between;
   }

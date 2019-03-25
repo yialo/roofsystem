@@ -1,5 +1,5 @@
 .container {
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     width: auto;
     max-width: none;
     margin-right: 0;
@@ -10,7 +10,7 @@
 }
 
 .row {
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     display: block;
     flex-wrap: nowrap;
     margin-right: 0;
@@ -19,7 +19,7 @@
 }
 
 .col {
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     position: static;
     flex: 0 1 auto;
     width: auto;
@@ -30,7 +30,7 @@
 
 @for $i from 1 through 12 {
   .col-#{$i} {
-    @media (min-width: $xl-min-width) {
+    @include media-breakpoint-up(xxl) {
       position: static;
       flex: 0 1 auto;
       width: auto;

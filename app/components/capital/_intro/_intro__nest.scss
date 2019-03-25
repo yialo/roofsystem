@@ -9,7 +9,7 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     &--content {
       padding-left: 26px;
       padding-right: 0;

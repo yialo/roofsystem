@@ -4,7 +4,11 @@
   letter-spacing: 0.03em;
   color: $gray-dark;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(sm) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-up(xxl) {
     font-size: 64px;
   }
 }

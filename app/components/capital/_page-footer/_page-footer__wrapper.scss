@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     display: block;
   }
 }

@@ -1,7 +1,7 @@
 .page-main__stable {
   margin-bottom: 56px;
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     flex-shrink: 0;
     margin-bottom: 0;
 

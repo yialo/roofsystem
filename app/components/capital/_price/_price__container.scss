@@ -1,7 +1,7 @@
 .price__container {
   @include padding-hor(15px);
 
-  @media (min-width: $xl-min-width) {
+  @include media-breakpoint-up(xxl) {
     @include padding-hor(0);
   }
 }
