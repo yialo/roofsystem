@@ -15,13 +15,12 @@
   }
 
   @include media-breakpoint-up(xl) {
+    display: flex;
+    padding-top: 0;
     padding-bottom: 320px;
   }
 
   @include media-breakpoint-up(xxl) {
-    display: flex;
-    padding-top: 0;
-
     .page-main--index & {
       padding-bottom: 440px;
     }

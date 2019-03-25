@@ -1,4 +1,13 @@
 .page-main__mutable {
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 auto;
+
+    .page-main--index & {
+      width: 45%;
+      margin-top: 156px;
+    }
+  }
+
   @include media-breakpoint-up(xxl) {
     .page-main--index & {
       width: 788px;

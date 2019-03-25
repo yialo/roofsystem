@@ -1,14 +1,24 @@
 .page-main__stable {
   margin-bottom: 56px;
 
-  @include media-breakpoint-up(xxl) {
-    flex-shrink: 0;
+  @include media-breakpoint-up(xl) {
+    @include padding-hor(30px);
+    flex: 0 0 auto;
     margin-bottom: 0;
+
+    .page-main--index & {
+      width: 55%;
+      margin-top: 120px;
+      margin-right: auto;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    @include padding-hor(0);
 
     .page-main--index & {
       width: 720px;
       margin-top: 159px;
-      margin-right: auto;
     }
 
     .page-main--about & {
