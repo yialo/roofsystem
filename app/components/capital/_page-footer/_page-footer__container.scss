@@ -5,6 +5,10 @@
   line-height: 16px;
   color: $gray-medium;
 
+  @include media-breakpoint-up(md) {
+    justify-content: space-between;
+  }
+
   @include media-breakpoint-up(xxl) {
     display: flex;
     justify-content: space-between;

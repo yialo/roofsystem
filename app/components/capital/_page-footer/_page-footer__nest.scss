@@ -3,9 +3,19 @@
     margin-bottom: 8px;
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(md) {
+    display: flex;
+
     &--copyright {
-      margin-bottom: 8px;
+      margin-bottom: 0;
     }
+
+    &--creator {
+      justify-content: flex-end;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    display: block;
   }
 }
