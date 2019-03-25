@@ -13,7 +13,7 @@
     margin-bottom: 0;
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(md) {
     $i-ver: "url(\"../img/price__entry--vertical.svg\")";
     $i-hor: "url(\"../img/price__entry--horizontal.svg\")";
     $p-start: "0.5px";
@@ -27,11 +27,12 @@
       (image: $i-hor, position: "#{$p-start} #{$p-end}", size: $s-hor, repeat: repeat-x,),
     );
 
+    --price__entry--value-width: 124px;
     padding-top: 11px;
     padding-bottom: 11px;
 
     &--key {
-      width: calc(100% - 124px);
+      width: calc(100% - var(--price__entry--value-width));
       padding-left: 24px;
     }
 
@@ -46,13 +47,13 @@
         z-index: -1;
         top: 0;
         left: 0;
-        width: calc(100% + 124px);
+        width: calc(100% + var(--price__entry--value-width));
         height: 100%;
       }
     }
 
     &--value {
-      width: 124px;
+      width: var(--price__entry--value-width);
       padding-right: 24px;
     }
   }

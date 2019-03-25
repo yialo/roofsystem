@@ -9,8 +9,12 @@
   letter-spacing: 0.03em;
   border-top: 2px solid $coral;
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(md) {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @include media-breakpoint-up(xxl) {
+
   }
 }
