@@ -8,7 +8,7 @@
 
   @include media-breakpoint-up(lg) {
     font-size: 18px;
-    padding-bottom: 21px;
+    padding-bottom: 12px;
     color: $gray-dark;
 
     &--current {
@@ -24,5 +24,9 @@
         background-color: $gray-dark;
       }
     }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 21px;
   }
 }

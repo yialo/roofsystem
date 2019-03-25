@@ -3,6 +3,12 @@
     text-align: center;
   }
 
+  @include media-breakpoint-up(lg) {
+    &--small {
+      text-align: right;
+    }
+  }
+
   @include media-breakpoint-up(xxl) {
     &--small {
       text-align: left;

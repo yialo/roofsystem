@@ -1,6 +1,6 @@
 .page-header.container
   .s-container.page-header__container.row.no-gutters
-    div(class=setModifiers('page-header__nest', ['logo'])).col-3
+    div(class=setModifiers('page-header__nest', ['logo'])).col-3.col-lg-2
       .logo
         a.logo__link(href=(pageId !== 'index' ? 'index.html' : null))
           img.logo__image(
@@ -13,7 +13,7 @@
       setModifiers('page-header__nest', ['navigation']),
       'col-9',
       'col-sm-10',
-      'col-lg-5',
+      'col-lg-7',
     ])
       .navigation
         ul.navigation__list
@@ -25,7 +25,12 @@
               isCurrent ? 'navigation-item--current' : null,
               'navigation__item',
             ]): a.navigation-item__link(href=(!isCurrent ? `${id}.html` : null))= label
-    div(class=[setModifiers('page-header__nest', ['tel']), 'col-6', 'col-sm-7', 'col-lg-4'])
+    div(class=[
+      setModifiers('page-header__nest', ['tel']),
+      'col-6',
+      'col-sm-7',
+      'col-lg-3',
+    ])
       +tel()(modifier='small')
     div(class=[setModifiers('page-header__nest', ['button']), 'col-3', 'col-sm-2'])
       .navigation-control

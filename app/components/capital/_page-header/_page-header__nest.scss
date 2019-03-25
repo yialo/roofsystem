@@ -32,6 +32,10 @@
   }
 
   @include media-breakpoint-up(lg) {
+    &--navigation {
+      align-self: center;
+    }
+
     &--button {
       display: none;
     }
