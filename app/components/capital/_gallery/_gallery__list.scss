@@ -4,14 +4,25 @@
   flex-direction: column;
   align-items: center;
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(md) {
+    @include padding-hor(15px);
     display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto;
+    grid-row-gap: 40px;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    @include padding-hor(0);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:
       496px
       minmax(408px, auto)
       minmax(280px, auto)
       minmax(720px, auto);
-    align-items: stretch;
+    grid-row-gap: 0;
+    justify-content: start;
   }
 }
