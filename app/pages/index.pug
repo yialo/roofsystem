@@ -4,11 +4,11 @@ block page-id
   - const pageId = 'index';
 
 block page-main_CONTENT
-  - const INTRO_SLIDES = [['кровли', 'первый'], ['фасада', 'второй']];
+  - const INTRO_SLIDES = [['кровли', 'первый', 'новой'], ['фасада', 'второй', 'нового']];
   each slide, i in INTRO_SLIDES
     -
       const number = i + 1;
-      const [product, numeral] = slide;
+      const [product, numeral, adjective] = slide;
     +page-main__wrapper(product)(modifier=number)
       .intro
         .intro__container
@@ -26,4 +26,4 @@ block page-main_CONTENT
                   aria-label=`Перейти на ${numeral} слайд`,
                 )
           div(class=setModifiers('intro__nest', ['content']))
-            p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка новой кровли обходится в приличную сумму денег, занимает большое количество времени.
+            p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка #{adjective} #{product} обходится в приличную сумму денег, занимает большое количество времени.
