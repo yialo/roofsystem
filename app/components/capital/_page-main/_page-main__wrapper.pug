@@ -1,4 +1,16 @@
-mixin page-main__wrapper()
+mixin page-main__wrapper(productName)
+  - const isIndex = (pageId === 'index');
   div(class=setModifiers('page-main__wrapper', [attributes.modifier])).container
     .s-container.page-main__container.row
-      block
+      .page-main__stable.col-12
+        div(class=setModifiers('titlebar', [isIndex ? 'inner' : 'inner']))
+          if isIndex
+            h1.titlebar__heading= SITE_TITLE
+            .titlebar__lead-wrapper
+              p.titlebar__lead Устройство, монтаж и ремонт #{productName}
+          else
+            h1.titlebar__lead= pageTitle
+          +titlebar__links()
+      .page-main__mutable.col-12
+        block page-main__mutable
+          block

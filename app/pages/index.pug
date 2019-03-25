@@ -9,28 +9,21 @@ block page-main_CONTENT
     -
       const number = i + 1;
       const [product, numeral] = slide;
-    +page-main__wrapper(modifier=number)
-      .page-main__stable.col-12
-        div(class=setModifiers('titlebar', ['index']))
-          h1.titlebar__heading= SITE_TITLE
-          .titlebar__lead-wrapper
-            p.titlebar__lead Устройство, монтаж и ремонт #{product}
-          +titlebar__links()
-      .page-main__mutable.col-12
-        .intro
-          .intro__container
-            div(class=setModifiers('intro__nest', ['paginator']))
-              .intro__paginator
-                each modifier, j in ['current', 'another']
-                  span(
-                    class=setModifiers('intro__number', [modifier]),
-                    role='presentation',
-                    aria-hidden='true',
-                  )= (number === 1 ? j + 1 : 2 - j)
-                .intro__bar
-                  button.intro__toggle(
-                    type='button',
-                    aria-label=`Перейти на ${numeral} слайд`,
-                  )
-            div(class=setModifiers('intro__nest', ['content']))
-              p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка новой кровли обходится в приличную сумму денег, занимает большое количество времени.
+    +page-main__wrapper(product)(modifier=number)
+      .intro
+        .intro__container
+          div(class=setModifiers('intro__nest', ['paginator']))
+            .intro__paginator
+              each modifier, j in ['current', 'another']
+                span(
+                  class=setModifiers('intro__number', [modifier]),
+                  role='presentation',
+                  aria-hidden='true',
+                )= (number === 1 ? j + 1 : 2 - j)
+              .intro__bar
+                button.intro__toggle(
+                  type='button',
+                  aria-label=`Перейти на ${numeral} слайд`,
+                )
+          div(class=setModifiers('intro__nest', ['content']))
+            p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка новой кровли обходится в приличную сумму денег, занимает большое количество времени.
