@@ -12,18 +12,18 @@
     }
   }
 
-  @include gallery-item-size($gallery-base-width-xs);
+  @include gallery-item-size($g-gallery-base-width-xs);
 
   &--pictures {
     margin-bottom: 24px;
   }
 
   @include media-breakpoint-up(lg) {
-    @include gallery-item-size($gallery-base-width-lg);
+    @include gallery-item-size($g-gallery-base-width-lg);
   }
 
   @include media-breakpoint-up(xxl) {
-    @include gallery-item-size($gallery-base-width-xxl);
+    @include gallery-item-size($g-gallery-base-width-xxl);
 
     &--pictures {
       margin-bottom: 28px;
