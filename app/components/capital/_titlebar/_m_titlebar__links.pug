@@ -15,9 +15,9 @@ mixin titlebar__links()
       return set;
     };
   .titlebar__links
-    each item in getTitlebarItems()
+    each item, i in getTitlebarItems()
       - const [modifier, legend] = item;
       a(
-        class=setModifiers('titlebar__link', [modifier]),
+        class=setModifiers('titlebar__link', [modifier, i + 1]),
         href=`${modifier}.html`,
       )= legend

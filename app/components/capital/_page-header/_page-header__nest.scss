@@ -33,7 +33,13 @@
 
   @include media-breakpoint-up(lg) {
     &--navigation {
-      align-self: center;
+      align-self: stretch;
+      margin-top: 18px;
+    }
+
+    &--tel {
+      align-self: stretch;
+      margin-top: 18px;
     }
 
     &--button {
@@ -44,11 +50,11 @@
   @include media-breakpoint-up(xxl) {
     &--logo {
       align-self: stretch;
+      margin-top: 12px;
       margin-right: 720px;
     }
 
     &--navigation {
-      align-self: stretch;
       width: 493px;
       margin-top: 30px;
       margin-bottom: 11px;

@@ -18,24 +18,42 @@
   }
 }
 
+$col-suffixes: (xs, sm, md, lg, xl,);
+
+@mixin col-reset() {
+  position: static;
+  flex: 0 1 auto;
+  width: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .col {
   @include media-breakpoint-up(xxl) {
-    position: static;
-    flex: 0 1 auto;
-    width: auto;
-    padding-right: 0;
-    padding-left: 0;
+    @include col-reset();
   }
 }
 
 @for $i from 1 through 12 {
   .col-#{$i} {
     @include media-breakpoint-up(xxl) {
-      position: static;
-      flex: 0 1 auto;
-      width: auto;
-      padding-right: 0;
-      padding-left: 0;
+      @include col-reset();
+    }
+  }
+}
+
+@each $suffix in $col-suffixes {
+  .col-#{$suffix} {
+    @include col-reset();
+  }
+}
+
+@each $suffix in $col-suffixes {
+  @for $i from 1 through 12 {
+    .col-#{$suffix}-#{$i} {
+      @include media-breakpoint-up(xxl) {
+        @include col-reset();
+      }
     }
   }
 }

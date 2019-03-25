@@ -41,6 +41,13 @@
     }
   }
 
+  @include media-breakpoint-up(lg) {
+    &--1 {
+      margin-right: 40px;
+    }
+  }
+
+
   @include media-breakpoint-up(xxl) {
     width: auto;
     font-size: 24px;
@@ -52,6 +59,10 @@
 
     &::after {
       bottom: 23px;
+    }
+
+    &--1 {
+      margin-right: 0;
     }
   }
 }
