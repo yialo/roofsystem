@@ -17,7 +17,15 @@
   @include media-breakpoint-up(xl) {
     display: flex;
     padding-top: 0;
-    padding-bottom: 320px;
+
+    .page-main--index & {
+      padding-bottom: 320px;
+    }
+
+    .page-main--about & {
+      padding-top: 120px;
+      padding-bottom: 360px;
+    }
   }
 
   @include media-breakpoint-up(xxl) {

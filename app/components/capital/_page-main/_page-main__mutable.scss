@@ -6,6 +6,10 @@
       width: 45%;
       margin-top: 156px;
     }
+
+    .page-main--about & {
+      width: 45%;
+    }
   }
 
   @include media-breakpoint-up(xxl) {

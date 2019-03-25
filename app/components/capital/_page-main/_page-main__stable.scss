@@ -11,6 +11,10 @@
       margin-top: 120px;
       margin-right: auto;
     }
+
+    .page-main--about & {
+      width: 55%;
+    }
   }
 
   @include media-breakpoint-up(xxl) {
