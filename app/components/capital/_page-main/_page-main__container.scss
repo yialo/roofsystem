@@ -3,19 +3,19 @@
   padding-bottom: 160px;
 
   @include media-breakpoint-up(sm) {
-    padding-bottom: 140px;
-  }
-
-  @include media-breakpoint-up(md) {
     padding-bottom: 180px;
   }
 
+  @include media-breakpoint-up(md) {
+    padding-bottom: 200px;
+  }
+
   @include media-breakpoint-up(lg) {
-    padding-bottom: 240px;
+    padding-bottom: 280px;
   }
 
   @include media-breakpoint-up(xl) {
-    padding-bottom: 280px;
+    padding-bottom: 320px;
   }
 
   @include media-breakpoint-up(xxl) {
