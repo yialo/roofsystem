@@ -15,5 +15,12 @@
   @include media-breakpoint-up(xl) {
     @include padding-hor(0);
     justify-content: space-between;
+
+    @include media-breakpoint-down(xl) {
+      .titlebar--price & {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }

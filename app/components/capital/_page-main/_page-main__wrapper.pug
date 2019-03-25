@@ -5,7 +5,10 @@ mixin page-main__wrapper(productName)
   .page-main__wrapper(class=modifierClassname).container
     .s-container.page-main__container.row
       .page-main__stable.col-12
-        div(class=setModifiers('titlebar', [isIndex ? 'inner' : 'inner']))
+        div(class=[
+          setModifiers('titlebar', [isIndex ? 'inner' : 'inner']),
+          pageId === 'price' ? 'titlebar--price' : null,
+        ])
           if isIndex
             h1.titlebar__heading= SITE_TITLE
             .titlebar__lead-wrapper
@@ -14,5 +17,4 @@ mixin page-main__wrapper(productName)
             h1.titlebar__lead= pageTitle
           +titlebar__links()
       .page-main__mutable.col-12
-        block page-main__mutable
-          block
+        block
