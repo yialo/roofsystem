@@ -15,7 +15,8 @@ html(lang='ru')
       header.page__header
         include ../components/capital/_page-header/_page-header
       main.page__main
-        include ../components/capital/_page-main/_page-main
+        div(class=[setModifiers('page-main', [pageId])])
+          block page-main_CONTENT
       footer.page__footer
         include ../components/capital/_page-footer/_page-footer
       include ../components/capital/_page/_page__scripts
