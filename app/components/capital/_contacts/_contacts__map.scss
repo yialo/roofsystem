@@ -5,4 +5,13 @@
   left: -15px;
   width: calc(100% + 30px);
   height: 100%;
+
+  @include media-breakpoint-up(md) {
+    left: -30px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    position: static;
+    width: 100%;
+  }
 }

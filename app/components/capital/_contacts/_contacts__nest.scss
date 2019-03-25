@@ -15,9 +15,31 @@
     margin-top: 32px;
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(md) {
     &--tel {
       width: 100%;
+      margin-bottom: 48px;
+    }
+
+    &--emails {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 300px;
+      margin-bottom: 0;
+      margin-right: 24px;
+    }
+
+    &--address {
+      display: flex;
+      align-items: center;
+      width: 300px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &--tel {
       margin-bottom: 78px;
     }
 
@@ -38,6 +60,7 @@
     }
 
     &--map {
+      position: static;
       height: 408px;
       margin-top: 80px;
     }
