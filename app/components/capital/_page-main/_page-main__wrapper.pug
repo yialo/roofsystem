@@ -1,6 +1,8 @@
 mixin page-main__wrapper(productName)
-  - const isIndex = (pageId === 'index');
-  div(class=setModifiers('page-main__wrapper', [attributes.modifier])).container
+  -
+    const isIndex = (pageId === 'index');
+    const modifierClassname = isIndex ? `page-main__wrapper--${attributes.modifier}` : null;
+  .page-main__wrapper(class=modifierClassname).container
     .s-container.page-main__container.row
       .page-main__stable.col-12
         div(class=setModifiers('titlebar', [isIndex ? 'inner' : 'inner']))

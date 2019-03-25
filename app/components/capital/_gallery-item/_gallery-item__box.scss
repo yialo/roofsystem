@@ -1,7 +1,7 @@
 .gallery-item__box {
   @mixin gallery-item-size($base-width) {
     $height-outermost: $base-width;
-    $height-middle: $base-width * 408 / 624;
+    $height-middle: $base-width * $g-gallery-main-coefficient;
 
     width: $base-width;
 
@@ -12,14 +12,18 @@
     }
   }
 
-  @include gallery-item-size(290px);
+  @include gallery-item-size($gallery-base-width-xs);
 
   &--pictures {
     margin-bottom: 24px;
   }
 
+  @include media-breakpoint-up(lg) {
+    @include gallery-item-size($gallery-base-width-lg);
+  }
+
   @include media-breakpoint-up(xxl) {
-    @include gallery-item-size(624px);
+    @include gallery-item-size($gallery-base-width-xxl);
 
     &--pictures {
       margin-bottom: 28px;

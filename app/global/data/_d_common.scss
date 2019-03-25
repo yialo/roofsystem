@@ -1,1 +1,9 @@
-/* Components */
+/* Common component variables */
+
+$gallery-base-width-xs: 290px;
+$gallery-base-width-lg: 410px;
+$gallery-base-width-xxl: 624px;
+
+$g-gallery-top-coefficient: (496 / 624);
+$g-gallery-main-coefficient: (408 / 624);
+$g-gallery-middle-coefficient: (280 / 624);

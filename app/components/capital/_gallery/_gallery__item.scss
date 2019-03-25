@@ -21,7 +21,7 @@
     }
   }
 
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(lg) {
     pointer-events: none;
 
     &--1 {
