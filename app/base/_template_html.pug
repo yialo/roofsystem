@@ -1,22 +1,22 @@
-include ../global/data/_d_common
+include ../global/data/_d_common.pug
 
 block page-id
 
 - const pageTitle = PAGES[pageId];
 
-include _import_functions
-include _import_mixins
+include _import_functions.pug
+include _import_mixins.pug
 
 doctype html
 html(lang='ru')
-  include ../components/capital/_head/_head
+  include ../components/capital/head/_head.pug
   body(class=setModifiers('page', [pageId]))
     .page__container
       header.page__header
-        include ../components/capital/_page-header/_page-header
+        include ../components/capital/page-header/_page-header.pug
       main.page__main
         div(class=[setModifiers('page-main', [pageId])])
           block page-main_CONTENT
       footer.page__footer
-        include ../components/capital/_page-footer/_page-footer
-      include ../components/capital/_page/_page__scripts
+        include ../components/capital/page-footer/_page-footer.pug
+      include ../components/capital/page/_page__scripts.pug
