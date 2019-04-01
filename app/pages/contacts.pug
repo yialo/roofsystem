@@ -3,6 +3,13 @@ extends ../base/_template_page-main--inner
 block page-id
   - const pageId = 'contacts';
 
+block head_Scripts
+  link(
+    rel='preload',
+    href='https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU',
+    as='script',
+  )
+
 block page-main__mutable
   .contacts
     - const CONTACTS_EMAILS = ['info', 'snab'];
@@ -18,3 +25,10 @@ block page-main__mutable
           | 123060, г. Москва#[br]ул. Маршала Бирюзова, 35#[br]кор. 2, 1Б
       div(class=setModifiers('contacts__nest', ['map']))
         .contacts__map#map
+
+block page_Scripts-distinct
+  script(
+    src='https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU',
+    type='text/javascript',
+  )
+  script(src='js/_contacts__map.js')

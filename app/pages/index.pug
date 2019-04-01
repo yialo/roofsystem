@@ -3,7 +3,7 @@ extends ../base/_template_html
 block page-id
   - const pageId = 'index';
 
-block page-main_CONTENT
+block page-main_Content
   - const INTRO_SLIDES = [['кровли', 'первый', 'новой'], ['фасада', 'второй', 'нового']];
   each slide, i in INTRO_SLIDES
     -
@@ -27,3 +27,6 @@ block page-main_CONTENT
                 )
           div(class=setModifiers('intro__nest', ['content']))
             p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка #{adjective} #{product} обходится в приличную сумму денег, занимает большое количество времени.
+
+block page_Scripts-distinct
+  script(src='js/_intro.js')

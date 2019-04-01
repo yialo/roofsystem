@@ -3,6 +3,14 @@ extends ../base/_template_page-main--inner
 block page-id
   - const pageId = 'gallery';
 
+block head_Scripts
+  link(
+    rel='preload',
+    href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+    as='script',
+  )
+  link(rel='preload', href='js/slick.js', as='script')
+
 block page-main__mutable
   .gallery
     -
@@ -30,3 +38,9 @@ block page-main__mutable
             p.gallery-item__caption
               time.gallery-item__time(datetime='2018-02-13') 13.02.2018
               span.s-text.gallery-item__legend= GALLERY_IMAGE_LEGEND
+
+block page_Scripts-distinct
+    script.
+      window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
+    script(src='js/slick.js')
+    script(src='js/_gallery-item.js')
