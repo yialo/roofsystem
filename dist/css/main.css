@@ -5797,12 +5797,6 @@ input[type="radio"].s-visually-hidden {
 .price__headline {
   margin-top: 0;
   margin-bottom: 24px; }
-  @media (min-width: 576px) {
-    .price__headline {
-      margin-bottom: 32px; } }
-  @media (min-width: 1920px) {
-    .price__headline {
-      margin-bottom: 64px; } }
 
 .price__item {
   margin-bottom: 32px; }
@@ -5854,7 +5848,7 @@ input[type="radio"].s-visually-hidden {
       font-size: 32px; } }
   @media (min-width: 1200px) {
     .price__string-wrapper {
-      font-size: 64px; } }
+      font-size: 36px; } }
 
 .price__string--colored {
   color: #ff5959; }

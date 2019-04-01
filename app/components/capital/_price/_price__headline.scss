@@ -1,12 +1,4 @@
 .price__headline {
   margin-top: 0;
   margin-bottom: 24px;
-
-  @include media-breakpoint-up(sm) {
-    margin-bottom: 32px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    margin-bottom: 64px;
-  }
 }
