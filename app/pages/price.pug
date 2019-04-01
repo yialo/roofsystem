@@ -13,21 +13,21 @@ block page-main__mutable
           span(class=setModifiers('price__string', ['colored'])) 900
           = ` ${PRICE_UNIT} `
         span(class=setModifiers('price__string', ['small'])) (под ключ)
-        ul.price__items
-          each item, i in PRICE_ITEMS
-            - const [caption, list] = item;
-            li(class=setLastModifier('price__item', PRICE_ITEMS, i + 1))
-              h2.price__caption= caption
-              dl.price__list
-                each set, j in list
-                  - const [term, price] = set;
-                  dt(class=[
-                    setModifiers('price__entry', ['key']),
-                    (j % 2 === 0 ? 'price__entry--stroked' : null),
-                  ])
-                    = term
-                  dd(class=[
-                    setModifiers('price__entry', ['value']),
-                    setLastModifier('price__entry', list, j + 1, false),
-                  ])
-                    = `${price} ${PRICE_UNIT}`
+      ul.price__items
+        each item, i in PRICE_ITEMS
+          - const [caption, list] = item;
+          li(class=setLastModifier('price__item', PRICE_ITEMS, i + 1))
+            h2.price__caption= caption
+            dl.price__list
+              each set, j in list
+                - const [term, price] = set;
+                dt(class=[
+                  setModifiers('price__entry', ['key']),
+                  (j % 2 === 0 ? 'price__entry--stroked' : null),
+                ])
+                  = term
+                dd(class=[
+                  setModifiers('price__entry', ['value']),
+                  setLastModifier('price__entry', list, j + 1, false),
+                ])
+                  = `${price} ${PRICE_UNIT}`
