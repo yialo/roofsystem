@@ -10,7 +10,7 @@ block head_Scripts
     as='script',
   )
   link(rel='preload', href='js/slick.js', as='script')
-
+  // test comment
 block page-main__mutable
   .gallery
     -
@@ -40,7 +40,8 @@ block page-main__mutable
               span.s-text.gallery-item__legend= GALLERY_IMAGE_LEGEND
 
 block page_Scripts-distinct
-    script.
-      window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
-    script(src='js/slick.js')
-    script(src='js/_gallery-item.js')
+  script.
+    'use strict';
+    window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>');
+  script(src='js/slick.js')
+  script(src='js/_gallery-item.js')
