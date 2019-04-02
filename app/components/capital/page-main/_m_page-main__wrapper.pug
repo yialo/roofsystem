@@ -10,11 +10,11 @@ mixin page-main__wrapper(productName)
           ['gallery', 'price'].includes(pageId) ? 'titlebar--narrow-xl' : null,
         ])
           if isIndex
-            h1.titlebar__heading= SITE_TITLE
+            h1.titlebar__heading= $SITE_TITLE
             .titlebar__lead-wrapper
               p.titlebar__lead Устройство, монтаж и ремонт #{productName}
           else
-            h1.titlebar__lead= pageTitle
+            h1.titlebar__lead= $pageTitle
           +titlebar__links()
       .page-main__mutable.col-12
         block

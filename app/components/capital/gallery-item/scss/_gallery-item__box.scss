@@ -1,7 +1,8 @@
 .gallery-item__box {
-  @mixin gallery-item-size($base-width) {
+  @mixin gallery-item-size($breakpoint-name) {
+    $base-width: get-gallery-base-width($breakpoint-name);
     $height-outermost: $base-width;
-    $height-middle: $base-width * $g-gallery-main-coefficient;
+    $height-middle: $base-width * get-gallery-coefficient(main);
 
     width: $base-width;
 
@@ -12,18 +13,18 @@
     }
   }
 
-  @include gallery-item-size($g-gallery-base-width-xs);
+  @include gallery-item-size(xs);
 
   &--pictures {
     margin-bottom: 24px;
   }
 
   @include media-breakpoint-up(lg) {
-    @include gallery-item-size($g-gallery-base-width-lg);
+    @include gallery-item-size(lg);
   }
 
   @include media-breakpoint-up(xxl) {
-    @include gallery-item-size($g-gallery-base-width-xxl);
+    @include gallery-item-size(xxl);
 
     &--pictures {
       margin-bottom: 28px;

@@ -7,7 +7,7 @@
             src='img/logo.svg',
             width='50',
             height='32',
-            alt=SITE_TITLE
+            alt=$SITE_TITLE
           )
     nav(class=[
       setModifiers('page-header__nest', ['navigation']),
@@ -17,7 +17,7 @@
     ])
       .navigation
         ul.navigation__list
-          each label, id in PAGES
+          each label, id in $PAGES
             - const isCurrent = (id === pageId);
             li(class=[
               'navigation-item',

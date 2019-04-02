@@ -17,13 +17,13 @@
   @include media-breakpoint-up(lg) {
     @include padding-hor(45px);
     grid-template-rows:
-      calc(var(--gallery-base-image-width) * #{$g-gallery-top-coefficient})
+      calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(top)})
       minmax(
-        calc(var(--gallery-base-image-width) * #{$g-gallery-main-coefficient}),
+        calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(main)}),
         auto
       )
       minmax(
-        calc(var(--gallery-base-image-width) * #{$g-gallery-middle-coefficient}),
+        calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(middle)}),
         auto
       )
       1fr;

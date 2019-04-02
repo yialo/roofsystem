@@ -1,8 +1,9 @@
 include ../global/data/_d_common.pug
+include ../global/data/_d_pages.pug
 
 block page-id
 
-- const pageTitle = PAGES[pageId];
+- const $pageTitle = $PAGES[pageId];
 
 include _import_functions.pug
 include _import_mixins.pug

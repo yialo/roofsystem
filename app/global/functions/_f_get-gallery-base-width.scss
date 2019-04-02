@@ -1,0 +1,6 @@
+@function get-gallery-base-width($breakpoint-name) {
+  $gallery-base-widths: (xs: 290px, lg: 410px, xxl: 624px,);
+  $gallery-width: map-get($gallery-base-widths, $breakpoint-name);
+
+  @return $gallery-width;
+}

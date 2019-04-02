@@ -1,6 +1,5 @@
 /* Breakpoints */
 /* Colors */
-/* Common component variables */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -4798,14 +4797,13 @@ html {
     padding-left: 0; } }
 
 /* Root custom properties */
-:root {
-  --gallery-base-image-width: 290px; }
-  @media (min-width: 992px) {
-    :root {
-      --gallery-base-image-width: 410px; } }
-  @media (min-width: 1920px) {
-    :root {
-      --gallery-base-image-width: 624px; } }
+@media (min-width: 992px) {
+  :root {
+    --gallery-base-image-width: 410px; } }
+
+@media (min-width: 1920px) {
+  :root {
+    --gallery-base-image-width: 624px; } }
 
 @font-face {
   font-style: normal;
@@ -5124,7 +5122,7 @@ input[type="radio"].s-visually-hidden {
     .gallery__list {
       padding-left: 45px;
       padding-right: 45px;
-      grid-template-rows: calc(var(--gallery-base-image-width) * 0.79487) minmax(calc(var(--gallery-base-image-width) * 0.65385), auto) minmax(calc(var(--gallery-base-image-width) * 0.44872), auto) 1fr;
+      grid-template-rows: calc(var(--gallery-base-image-width) * 0.79487) minmax(calc(var(--gallery-base-image-width) * 0.76923), auto) minmax(calc(var(--gallery-base-image-width) * 0.44872), auto) 1fr;
       grid-template-columns: repeat(4, 1fr);
       grid-row-gap: 0;
       -webkit-box-pack: start;
@@ -5140,9 +5138,9 @@ input[type="radio"].s-visually-hidden {
   .gallery-item--1 .gallery-item__box {
     height: 290px; }
   .gallery-item--2 .gallery-item__box {
-    height: 189.61538px; }
+    height: 223.07692px; }
   .gallery-item--3 .gallery-item__box {
-    height: 189.61538px; }
+    height: 223.07692px; }
   .gallery-item--4 .gallery-item__box {
     height: 290px; }
   .gallery-item__box--pictures {
@@ -5153,9 +5151,9 @@ input[type="radio"].s-visually-hidden {
       .gallery-item--1 .gallery-item__box {
         height: 410px; }
       .gallery-item--2 .gallery-item__box {
-        height: 268.07692px; }
+        height: 315.38462px; }
       .gallery-item--3 .gallery-item__box {
-        height: 268.07692px; }
+        height: 315.38462px; }
       .gallery-item--4 .gallery-item__box {
         height: 410px; } }
   @media (min-width: 1920px) {
@@ -5164,9 +5162,9 @@ input[type="radio"].s-visually-hidden {
       .gallery-item--1 .gallery-item__box {
         height: 624px; }
       .gallery-item--2 .gallery-item__box {
-        height: 408px; }
+        height: 480px; }
       .gallery-item--3 .gallery-item__box {
-        height: 408px; }
+        height: 480px; }
       .gallery-item--4 .gallery-item__box {
         height: 624px; }
       .gallery-item__box--pictures {
