@@ -1,4 +1,4 @@
-extends ../base/_template_page-main--inner
+extends ../base/_template_page-main--inner.pug
 
 block page-id
   - const pageId = 'gallery';
@@ -14,34 +14,41 @@ block head_Scripts
 block page-main__mutable
   .gallery
     -
-      const GALLERY_IMAGE_LEGEND = 'Коттеджный поселок “Люто дорого”';
-      const GALLERY_PICTURE_AMOUNTS = [16, 7, 6, 5];
+      const GALLERY_ITEMS = [
+        ['Вишневый сад', 16],
+        ['Беседки', 7],
+        ['Раздоры', 6],
+        ['Школа экономики', 5],
+      ];
+      const GALLERY_MEDIA_SET = [['xxl', 624], ['lg', 410], 290];
     ul.gallery__list
-      each item, i in GALLERY_PICTURE_AMOUNTS
+      each item, i in GALLERY_ITEMS
         -
           const number = i + 1;
-          const amount = GALLERY_PICTURE_AMOUNTS[i];
+          const [caption, amount] = item;
         li(class=[
           setModifiers('gallery-item', [number]),
           setModifiers('gallery__item', [number]),
-          setLastModifier('gallery__item', GALLERY_PICTURE_AMOUNTS, number, false),
+          setLastModifier('gallery__item', GALLERY_ITEMS, number, false),
         ])
           .gallery-item__container
             div(class=setModifiers('gallery-item__box', ['pictures']))
+              include ../components/capital/gallery-item/_m_gallery-item__box--picture.pug
               - for (let j = 1; j <= amount; j += 1)
                 .gallery-item__wrapper
-                  picture(class=setModifiers('gallery-item__box', ['picture']))
-                    img.gallery-item__image(
-                      src=`img/gallery-item--${number}__image-${j}.jpg`,
-                      alt=GALLERY_IMAGE_LEGEND,
-                    )
+                  +gallery-item__box--picture({
+                    alt: caption,
+                    path: `gallery-item--${number}__image-${j}`,
+                    mediaSet: GALLERY_MEDIA_SET,
+                  })
             p.gallery-item__caption
               time.gallery-item__time(datetime='2018-02-13') 13.02.2018
-              span.s-text.gallery-item__legend= GALLERY_IMAGE_LEGEND
+              span.s-text.gallery-item__legend= caption
 
 block page_Scripts-distinct
   script.
     'use strict';
     window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>');
   script(src='js/slick.js')
+  script(scr='js/lightbox.js')
   script(src='js/_gallery-item.js')

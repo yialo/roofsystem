@@ -1,0 +1,38 @@
+mixin gallery-item__box--picture(genericPicture_props)
+  -
+    const _BREAKPOINTS = {
+      xxl: '(min-width: 1920px)',
+      lg: '(min-width: 992px)',
+    };
+    const getPictureData = function (props) {
+      const { path, mediaSet } = props;
+      const lastIndex = mediaSet.length - 1;
+      let finalSet = { srcset: '', sizes: '' };
+
+      finalSet.src = `img/${path}@${mediaSet[lastIndex]}.jpg`;
+
+      for (let i = 0; i <= lastIndex; i += 1) {
+        if (i < lastIndex) {
+          const [mq, width] = mediaSet[i];
+          const srcToAdd = `img/${path}@${width}.jpg ${width}w, `;
+          const sizeToAdd = `${_BREAKPOINTS[mq]} ${width}px, `;
+          finalSet.srcset += srcToAdd;
+          finalSet.sizes += sizeToAdd;
+        } else {
+          const srcToAdd = `img/${path}@${mediaSet[i]}.jpg ${mediaSet[i]}w`;
+          finalSet.srcset += srcToAdd;
+          finalSet.sizes += `${mediaSet[i]}px`;
+        }
+      }
+
+      return finalSet;
+    };
+    const { srcset, sizes, src } = getPictureData(genericPicture_props);
+
+  picture(class=setModifiers('gallery-item__box', ['picture']))
+    img.gallery-item__image(
+      srcset=srcset,
+      sizes=sizes,
+      src=src,
+      alt=genericPicture_props.alt,
+    )
