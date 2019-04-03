@@ -1,11 +1,11 @@
 .price__string {
   &--colored {
-    color: $coral;
+    color: $color-coral;
   }
 
   &--small {
     font-size: 16px;
-    color: $gray-light;
+    color: $color-gray-light;
   }
 
   @include media-breakpoint-up(sm) {

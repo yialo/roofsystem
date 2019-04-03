@@ -7,14 +7,10 @@
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  border-top: 2px solid $coral;
+  border-top: 2px solid $color-coral;
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  @include media-breakpoint-up(xxl) {
-
   }
 }

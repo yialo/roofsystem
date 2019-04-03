@@ -9,7 +9,7 @@
   padding-right: 14px;
   font-size: 18px;
   line-height: 48px;
-  color: $gray-dark;
+  color: $color-gray-dark;
 
   &::before {
     content: "";
@@ -30,7 +30,7 @@
     z-index: -1;
     width: 100%;
     height: 8px;
-    background-color: $coral;
+    background-color: $color-coral;
   }
 
   @each $modifier in $link-modifiers {
