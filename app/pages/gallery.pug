@@ -44,6 +44,16 @@ block page-main__mutable
             p.gallery-item__caption
               time.gallery-item__time(datetime='2018-02-13') 13.02.2018
               span.s-text.gallery-item__legend= caption
+          .gallery-item__popup
+            each title, number in captions.slice(1)
+              - const j = number + 2;
+              a.project-cards__link(
+                href=`img/gallery-item--${i}-${j}.jpg`,
+                data-lightbox=`gallery-item-${i}`,
+                data-headline=group,
+                data-title=title,
+                data-alt=title,
+              )
 
 block page_Scripts-distinct
   script.
