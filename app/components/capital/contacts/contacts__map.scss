@@ -1,0 +1,17 @@
+#{$this}__map {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 100%;
+
+  @include media-breakpoint-up(md) {
+    left: -30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    position: static;
+    width: 100%;
+  }
+}

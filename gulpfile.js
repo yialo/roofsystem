@@ -19,7 +19,7 @@ const postcss = require('gulp-postcss');
 const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const sassglob = require('gulp-sass-glob');
+const sassmagicimport = require('node-sass-magic-importer');
 const server = require('browser-sync').create();
 const validator = require('gulp-w3c-html-validator');
 const zopfli = require('imagemin-zopfli');
@@ -154,11 +154,7 @@ const svgoSettings = [
 const minsvg = function mimimizeSvgImages() {
   return gulp
     .src(`${imageProcessingPaths.input}*.svg`)
-    .pipe(
-      minimage([
-        minimage.svgo({ plugins: svgoSettings }),
-      ]),
-    )
+    .pipe(minimage([minimage.svgo({ plugins: svgoSettings })]))
     .pipe(gulp.dest(imageProcessingPaths.output));
 };
 
@@ -184,42 +180,35 @@ const validateHtml = function validateHtmlOutputFiles() {
     .pipe(validator.reporter());
 };
 
-const removeHtmlComments = function removeCommentsFromHtmlFile() {
-  return gulp
-    .src('./dist/*.html')
-    .pipe(minhtml(minhtmlSettings))
-    .pipe(gulp.dest('./spec/html-minimized'));
-};
-
 const cleanbuild = function deleteFormerBuildFolder() {
   return del('./dist/');
 };
 
 const copyvideo = function copyVideoFilesToBuildFolder() {
-  return gulp.src(videoSrc)
+  return gulp
+    .src(videoSrc)
     .pipe(flatten())
     .pipe(gulp.dest('./dist/video/'));
 };
 
 const copyfavicons = function copyFaviconsToBuildFolder() {
-  return gulp.src(faviconstSrc)
-    .pipe(gulp.dest('./dist/favicons/'));
+  return gulp.src(faviconstSrc).pipe(gulp.dest('./dist/favicons/'));
 };
 
 const copyfonts = function copyFontFilesToBuildFolder() {
-  return gulp
-    .src(fontsSrc)
-    .pipe(gulp.dest('./dist/fonts/'));
+  return gulp.src(fontsSrc).pipe(gulp.dest('./dist/fonts/'));
 };
 
 const copysvg = function copySvgImagesToBuildFolder() {
-  return gulp.src(svgSrc)
+  return gulp
+    .src(svgSrc)
     .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
 };
 
 const copybitmaps = function copyBitmapImagesToBuildFolder() {
-  return gulp.src(bitmapsSrc)
+  return gulp
+    .src(bitmapsSrc)
     .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
 };
@@ -227,6 +216,7 @@ const copybitmaps = function copyBitmapImagesToBuildFolder() {
 const scripts = function launchJsCompiler() {
   return gulp
     .src(jsSrc)
+    .pipe(plumber())
     .pipe(minjs())
     .pipe(gulp.dest('./dist/js/'));
 };
@@ -235,8 +225,7 @@ const style = function launchCssCompiler() {
   return gulp
     .src(cssSrc)
     .pipe(plumber())
-    .pipe(sassglob())
-    .pipe(sass())
+    .pipe(sass({ importer: sassmagicimport() }))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(mincss())
@@ -249,7 +238,8 @@ const html = function launchHtmlCompiler() {
   return gulp
     .src(pugSrc)
     .pipe(plumber())
-    .pipe(pug({ pretty: true }))
+    .pipe(pug())
+    .pipe(minhtml(minhtmlSettings))
     .pipe(gulp.dest('./dist/'))
     .pipe(server.stream());
 };
@@ -276,8 +266,7 @@ const watchSvg = function watchForSvgFiles() {
 };
 
 const watchBitmaps = function watchForBitmapFiles() {
-  return gulp
-    .watch(bitmapsSrc, gulp.series(copybitmaps, reload));
+  return gulp.watch(bitmapsSrc, gulp.series(copybitmaps, reload));
 };
 
 const watchFonts = function watchForFontFiles() {
@@ -297,12 +286,14 @@ gulp.task('bitmapcopy', copybitmaps);
 gulp.task('imagemin', gulp.parallel('svgmin', 'bitmapmin'));
 gulp.task('imagecopy', gulp.parallel('svgcopy', 'bitmapcopy'));
 gulp.task('validate', validateHtml);
-gulp.task('cleanhtml', removeHtmlComments);
 gulp.task(
   'copyassets',
   gulp.parallel(copyfonts, copyfavicons, 'imagecopy', copyvideo),
 );
-gulp.task('watchForAll', gulp.parallel(watchJs, watchSvg, watchBitmaps, watchFonts, watchFavicons));
+gulp.task(
+  'watchForAll',
+  gulp.parallel(watchJs, watchSvg, watchBitmaps, watchFonts, watchFavicons),
+);
 gulp.task('build', gulp.series(cleanbuild, 'copyassets', scripts, style, html));
 gulp.task('serve', gulp.series(serve, 'watchForAll'));
 

@@ -1,0 +1,16 @@
+#{$this}__container {
+  padding-top: 15px;
+  padding-bottom: 17px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-gray-medium;
+
+  @include media-breakpoint-up(md) {
+    justify-content: space-between;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

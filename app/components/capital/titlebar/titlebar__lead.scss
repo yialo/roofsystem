@@ -1,0 +1,29 @@
+#{$this}__lead {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-gray-dark;
+
+  #{$this}--inner & {
+    margin-bottom: 24px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: left;
+
+    #{$this}--inner & {
+      margin-bottom: 64px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 64px;
+  }
+}

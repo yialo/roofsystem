@@ -1,78 +1,41 @@
-@import "../global/data/*.scss";
-@import "../global/functions/*.scss";
-@import "../global/mixins/*.scss";
-@import "../vendors/normalize.scss";
-@import "../vendors/slick.scss";
-@import "../bootstrap/bootstrap-grid.scss";
-@import "../vendors_customized/*.scss";
-@import "../global/styles/root.scss";
-@import "../global/styles/fonts.scss";
-@import "../global/styles/animations.scss";
-@import "../global/styles/tags.scss";
-@import "../components/scaffold/s-container/s-container.scss";
-@import "../components/scaffold/s-text/s-text.scss";
-@import "../components/scaffold/s-visually-hidden/s-visually-hidden";
-@import "../components/capital/about/about__container.scss";
-@import "../components/capital/about/about__heading.scss";
-@import "../components/capital/about/about__string.scss";
-@import "../components/capital/contacts/contacts__address.scss";
-@import "../components/capital/contacts/contacts__container.scss";
-@import "../components/capital/contacts/contacts__email.scss";
-@import "../components/capital/contacts/contacts__map.scss";
-@import "../components/capital/contacts/contacts__nest.scss";
-@import "../components/capital/contacts/contacts__string.scss";
-@import "../components/capital/gallery/gallery__item.scss";
-@import "../components/capital/gallery/gallery__list.scss";
-@import "../components/capital/gallery-item/gallery-item__box.scss";
-@import "../components/capital/gallery-item/gallery-item__caption.scss";
-@import "../components/capital/gallery-item/gallery-item__container.scss";
-@import "../components/capital/gallery-item/gallery-item__image.scss";
-@import "../components/capital/gallery-item/gallery-item__legend.scss";
-@import "../components/capital/gallery-item/gallery-item__time.scss";
-@import "../components/capital/intro/intro__bar.scss";
-@import "../components/capital/intro/intro__description.scss";
-@import "../components/capital/intro/intro__nest.scss";
-@import "../components/capital/intro/intro__number.scss";
-@import "../components/capital/intro/intro__paginator.scss";
-@import "../components/capital/intro/intro__toggle.scss";
-@import "../components/capital/logo/logo__image.scss";
-@import "../components/capital/logo/logo__link.scss";
-@import "../components/capital/navigation/navigation.scss";
-@import "../components/capital/navigation/navigation__list.scss";
-@import "../components/capital/navigation-button/navigation-button.scss";
-@import "../components/capital/navigation-button/navigation-button__line.scss";
-@import "../components/capital/navigation-button/navigation-button__wrapper.scss";
-@import "../components/capital/navigation-control/navigation-control__button.scss";
-@import "../components/capital/navigation-item/navigation-item.scss";
-@import "../components/capital/navigation-item/navigation-item__link.scss";
-@import "../components/capital/page/page__container.scss";
-@import "../components/capital/page/page__main.scss";
-@import "../components/capital/page-footer/page-footer__container.scss";
-@import "../components/capital/page-footer/page-footer__link.scss";
-@import "../components/capital/page-footer/page-footer__nest.scss";
-@import "../components/capital/page-footer/page-footer__paragraph.scss";
-@import "../components/capital/page-footer/page-footer__string.scss";
-@import "../components/capital/page-footer/page-footer__wrapper.scss";
-@import "../components/capital/page-header/page-header__container.scss";
-@import "../components/capital/page-header/page-header__nest.scss";
-@import "../components/capital/page-main/page-main.scss";
-@import "../components/capital/page-main/page-main__container.scss";
-@import "../components/capital/page-main/page-main__mutable.scss";
-@import "../components/capital/page-main/page-main__stable.scss";
-@import "../components/capital/page-main/page-main__wrapper.scss";
-@import "../components/capital/price/price__caption.scss";
-@import "../components/capital/price/price__container.scss";
-@import "../components/capital/price/price__entry.scss";
-@import "../components/capital/price/price__headline.scss";
-@import "../components/capital/price/price__item.scss";
-@import "../components/capital/price/price__items.scss";
-@import "../components/capital/price/price__list.scss";
-@import "../components/capital/price/price__string.scss";
-@import "../components/capital/price/price__string-wrapper.scss";
-@import "../components/capital/tel/tel.scss";
-@import "../components/capital/tel/tel__link.scss";
-@import "../components/capital/titlebar/titlebar__heading.scss";
-@import "../components/capital/titlebar/titlebar__lead.scss";
-@import "../components/capital/titlebar/titlebar__lead-wrapper.scss";
-@import "../components/capital/titlebar/titlebar__link.scss";
-@import "../components/capital/titlebar/titlebar__links.scss";
+@import
+  "../global/data/*.scss",
+  "../global/functions/*.scss",
+  "../global/mixins/*.scss";
+
+@import
+  "~normalize.css",
+  "~slick-carousel/slick/slick.scss",
+  "~bootstrap/scss/bootstrap-grid.scss";
+
+@import
+  "../vendors_customized/_bootstrap-grid_customized.scss";
+
+@import
+  "../global/styles/_root.scss",
+  "../global/styles/_fonts.scss",
+  "../global/styles/_animations.scss",
+  "../global/styles/_tags.scss";
+
+@import
+  "../components/scaffold/s-container/_i_s-container.scss",
+  "../components/scaffold/s-text/_i_s-text.scss",
+  "../components/scaffold/s-visually-hidden/_i_s-visually-hidden.scss";
+
+@import
+  "../components/capital/about/_i_about.scss",
+  "../components/capital/contacts/_i_contacts.scss",
+  "../components/capital/gallery/_i_gallery.scss",
+  "../components/capital/gallery-item/_i_gallery-item.scss",
+  "../components/capital/logo/_i_logo.scss",
+  "../components/capital/navigation/_i_navigation.scss",
+  "../components/capital/navigation-button/_i_navigation-button.scss",
+  "../components/capital/navigation-control/_i_navigation-control.scss",
+  "../components/capital/navigation-item/_i_navigation-item.scss",
+  "../components/capital/page/_i_page.scss",
+  "../components/capital/page-footer/_i_page-footer.scss",
+  "../components/capital/page-header/_i_page-header.scss",
+  "../components/capital/page-main/_i_page-main.scss",
+  "../components/capital/price/_i_price.scss",
+  "../components/capital/tel/_i_tel.scss",
+  "../components/capital/titlebar/_i_titlebar.scss";

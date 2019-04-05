@@ -1,0 +1,7 @@
+$this: ".page-main";
+
+#{$this} {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

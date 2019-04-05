@@ -1,0 +1,12 @@
+#{$this}__lead-wrapper {
+  @include padding-hor();
+  margin-bottom: 16px;
+
+  @include media-breakpoint-up(xl) {
+    @include padding-hor(0);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 24px;
+  }
+}

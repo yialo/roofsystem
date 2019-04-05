@@ -1,0 +1,26 @@
+#{$this}__links {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    @include padding-hor(15px);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include media-breakpoint-up(lg) {
+    justify-content: center;
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include padding-hor(0);
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xl) {
+      #{$this}--narrow-xl & {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+$this: ".navigation-item";
+
+#{$this} {
+  font-size: 20px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 28px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+    padding-bottom: 12px;
+    color: $color-gray-dark;
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 8px;
+        height: 4px;
+        background-color: $color-gray-dark;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 21px;
+  }
+}

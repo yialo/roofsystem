@@ -1,7 +1,0 @@
-.price__item {
-  @include margin-bottom-last(32px);
-
-  @include media-breakpoint-up(md) {
-    @include margin-bottom-last(40px);
-  }
-}

@@ -1,0 +1,20 @@
+#{$this}__container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,14 @@
+#{$this}__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-gray-light;
+
+  @include media-breakpoint-up(xl) {
+    text-align: left;
+  }
+}

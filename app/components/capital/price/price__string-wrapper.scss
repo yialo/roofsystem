@@ -1,0 +1,14 @@
+#{$this}__string-wrapper {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  color: $color-gray-dark;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 36px;
+  }
+}

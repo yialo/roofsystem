@@ -1,0 +1,75 @@
+#{$this}__container {
+  padding-top: 32px;
+  padding-bottom: 160px;
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 180px;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 200px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 280px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    padding-top: 0;
+
+    #{$this}--index & {
+      padding-bottom: 320px;
+    }
+
+    #{$this}--about & {
+      padding-top: 120px;
+      padding-bottom: 360px;
+    }
+
+    #{$this}--gallery & {
+      display: grid;
+      grid-template: 1fr / 25% 10% 1fr;
+      justify-content: start;
+      width: auto;
+      padding-bottom: 400px;
+    }
+
+    #{$this}--price & {
+      padding-top: 140px;
+      padding-bottom: 320px;
+    }
+
+    #{$this}--contacts & {
+      padding-top: 120px;
+      padding-bottom: 400px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    #{$this}--index & {
+      padding-bottom: 440px;
+    }
+
+    #{$this}--about & {
+      padding-top: 207px;
+      padding-bottom: 430px;
+    }
+
+    #{$this}--gallery & {
+      display: grid;
+      grid-template: 1fr / 494px 110px 1fr;
+      padding-bottom: 578px;
+    }
+
+    #{$this}--price & {
+      padding-top: 207px;
+      padding-bottom: 474px;
+    }
+
+    #{$this}--contacts & {
+      padding-top: 207px;
+      padding-bottom: 663px;
+    }
+  }
+}

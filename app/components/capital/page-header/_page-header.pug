@@ -1,6 +1,6 @@
 .page-header.container
   .s-container.page-header__container.row.no-gutters
-    div(class=setModifiers('page-header__nest', ['logo'])).col-3.col-lg-2
+    .col-3.col-lg-2(class=setModifiers('page-header__nest', ['logo']))
       .logo
         a.logo__link(href=(pageId !== 'index' ? 'index.html' : null))
           img.logo__image(

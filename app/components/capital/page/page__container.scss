@@ -1,0 +1,10 @@
+#{$this}__container {
+  @include margin-hor();
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(xxl) {
+    width: $xl-min-width;
+  }
+}

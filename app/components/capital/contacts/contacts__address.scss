@@ -1,0 +1,18 @@
+#{$this}__address {
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+
+  @include media-breakpoint-only(sm) {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-only(xl) {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,38 @@
+#{$this}__list {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    @include padding-hor(15px);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto;
+    grid-row-gap: 40px;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include padding-hor(45px);
+    grid-template-rows:
+      calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(top)})
+      minmax(
+        calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(main)}),
+        auto
+      )
+      minmax(
+        calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(middle)}),
+        auto
+      )
+      1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 0;
+    justify-content: start;
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include padding-hor(0);
+  }
+}
