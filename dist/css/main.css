@@ -4849,7 +4849,7 @@ input[type="radio"].s-visually-hidden {
           flex-direction: column; }
   @media (min-width: 1920px) {
     .page__container {
-      width: 1920px; } }
+      width: 1900px; } }
 
 .page__main {
   -webkit-box-flex: 1;
