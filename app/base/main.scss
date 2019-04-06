@@ -18,24 +18,25 @@
   "../global/styles/_tags.scss";
 
 @import
-  "../components/scaffold/s-container/_i_s-container.scss",
-  "../components/scaffold/s-text/_i_s-text.scss",
-  "../components/scaffold/s-visually-hidden/_i_s-visually-hidden.scss";
+  "../components/scaffold/s-container/*.scss",
+  "../components/scaffold/s-text/*.scss",
+  "../components/scaffold/s-visually-hidden/*.scss";
 
 @import
-  "../components/capital/about/_i_about.scss",
-  "../components/capital/contacts/_i_contacts.scss",
-  "../components/capital/gallery/_i_gallery.scss",
-  "../components/capital/gallery-item/_i_gallery-item.scss",
-  "../components/capital/logo/_i_logo.scss",
-  "../components/capital/navigation/_i_navigation.scss",
-  "../components/capital/navigation-button/_i_navigation-button.scss",
-  "../components/capital/navigation-control/_i_navigation-control.scss",
-  "../components/capital/navigation-item/_i_navigation-item.scss",
-  "../components/capital/page/_i_page.scss",
-  "../components/capital/page-footer/_i_page-footer.scss",
-  "../components/capital/page-header/_i_page-header.scss",
-  "../components/capital/page-main/_i_page-main.scss",
-  "../components/capital/price/_i_price.scss",
-  "../components/capital/tel/_i_tel.scss",
-  "../components/capital/titlebar/_i_titlebar.scss";
+  "../components/capital/about/*.scss",
+  "../components/capital/contacts/*.scss",
+  "../components/capital/gallery/*.scss",
+  "../components/capital/gallery-item/*.scss",
+  "../components/capital/intro/*.scss",
+  "../components/capital/logo/*.scss",
+  "../components/capital/navigation/*.scss",
+  "../components/capital/navigation-button/*.scss",
+  "../components/capital/navigation-control/*.scss",
+  "../components/capital/navigation-item/*.scss",
+  "../components/capital/page/*.scss",
+  "../components/capital/page-footer/*.scss",
+  "../components/capital/page-header/*.scss",
+  "../components/capital/page-main/*.scss",
+  "../components/capital/price/*.scss",
+  "../components/capital/tel/*.scss",
+  "../components/capital/titlebar/*.scss";
