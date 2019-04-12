@@ -4,8 +4,6 @@
   }
 
   &--paginator {
-    @include padding-hor(15px);
-    height: 16px;
     margin-bottom: 30px;
   }
 
@@ -17,6 +15,7 @@
 
     &--paginator {
       @include padding-hor(0);
+      margin-bottom: 50px;
     }
   }
 }

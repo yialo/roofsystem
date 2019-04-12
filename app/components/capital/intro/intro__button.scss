@@ -1,0 +1,15 @@
+#{$this}__button {
+  width: 50%;
+  padding: 12px 0 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: $color-coral;
+  background-color: transparent;
+  border: 2px solid $color-coral;
+
+  &--current {
+    color: white;
+    background-color: $color-coral;
+    cursor: default;
+  }
+}

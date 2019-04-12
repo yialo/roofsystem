@@ -19,6 +19,7 @@
     padding-top: 0;
 
     #{$this}--index & {
+      padding-top: 120px;
       padding-bottom: 320px;
     }
 
@@ -48,6 +49,7 @@
 
   @include media-breakpoint-up(xxl) {
     #{$this}--index & {
+      padding-top: 256px;
       padding-bottom: 440px;
     }
 

@@ -4,7 +4,6 @@
 
     #{$this}--index & {
       width: 45%;
-      margin-top: 156px;
     }
 
     #{$this}--about & {
@@ -32,8 +31,7 @@
 
   @include media-breakpoint-up(xxl) {
     #{$this}--index & {
-      width: 788px;
-      margin-top: 256px;
+      width: 606px;
     }
 
     #{$this}--about & {

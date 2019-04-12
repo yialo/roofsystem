@@ -4641,9 +4641,18 @@ input[type="radio"].s-visually-hidden {
   letter-spacing: 0.03em;
   color: #b0adad; }
 
-.intro__bar {
-  height: 4px;
-  background-color: #ff5959; }
+.intro__button {
+  width: 50%;
+  padding: 12px 0 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ff5959;
+  background-color: transparent;
+  border: 2px solid #ff5959; }
+  .intro__button--current {
+    color: white;
+    background-color: #ff5959;
+    cursor: default; }
 
 @media (min-width: 1920px) {
   .intro__description {
@@ -4654,9 +4663,6 @@ input[type="radio"].s-visually-hidden {
   padding-right: 30px; }
 
 .intro__nest--paginator {
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 16px;
   margin-bottom: 30px; }
 
 @media (min-width: 1920px) {
@@ -4665,54 +4671,20 @@ input[type="radio"].s-visually-hidden {
     padding-right: 0; }
   .intro__nest--paginator {
     padding-left: 0;
-    padding-right: 0; } }
-
-.intro__number {
-  position: absolute;
-  bottom: -4px;
-  font-weight: 700;
-  font-size: 16px;
-  color: #3c3636; }
-  .intro__number--current {
-    left: 0; }
-  .intro__number--another {
-    right: 0; }
-  @media (min-width: 1920px) {
-    .intro__number {
-      bottom: -4px; }
-      .intro__number--current {
-        left: 0; }
-      .intro__number--another {
-        right: 0; } }
+    padding-right: 0;
+    margin-bottom: 50px; } }
 
 .intro__paginator {
-  position: relative;
-  padding-top: 12px;
-  padding-left: 26px;
-  padding-right: 26px; }
-
-.intro__toggle {
-  position: relative;
-  z-index: 0;
-  width: calc(100% * 462 / 736);
-  height: 100%;
-  margin-left: auto;
-  padding: 0;
-  border-style: none;
-  background-color: #dbdbdb; }
-  .intro__toggle::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    height: 20px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 1200px) {
+    .intro__paginator {
+      padding-left: 30px;
+      padding-right: 30px; } }
   @media (min-width: 1920px) {
-    .intro__toggle::before {
-      height: 40px; } }
+    .intro__paginator {
+      padding-right: 0; } }
 
 .logo__image {
   width: 100%;
@@ -5026,6 +4998,7 @@ input[type="radio"].s-visually-hidden {
       display: flex;
       padding-top: 0; }
       .page-main--index .page-main__container {
+        padding-top: 120px;
         padding-bottom: 320px; }
       .page-main--about .page-main__container {
         padding-top: 120px;
@@ -5046,6 +5019,7 @@ input[type="radio"].s-visually-hidden {
         padding-bottom: 400px; } }
   @media (min-width: 1920px) {
     .page-main--index .page-main__container {
+      padding-top: 256px;
       padding-bottom: 440px; }
     .page-main--about .page-main__container {
       padding-top: 207px;
@@ -5067,8 +5041,7 @@ input[type="radio"].s-visually-hidden {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; }
     .page-main--index .page-main__mutable {
-      width: 45%;
-      margin-top: 156px; }
+      width: 45%; }
     .page-main--about .page-main__mutable {
       width: 45%; }
     .page-main--gallery .page-main__mutable {
@@ -5087,8 +5060,7 @@ input[type="radio"].s-visually-hidden {
 
 @media (min-width: 1920px) {
   .page-main--index .page-main__mutable {
-    width: 788px;
-    margin-top: 256px; }
+    width: 606px; }
   .page-main--about .page-main__mutable {
     width: 600px; }
   .page-main--gallery .page-main__mutable {
@@ -5110,7 +5082,6 @@ input[type="radio"].s-visually-hidden {
       margin-bottom: 0; }
       .page-main--index .page-main__stable {
         width: 55%;
-        margin-top: 120px;
         margin-right: auto; }
       .page-main--about .page-main__stable {
         width: 55%; }
@@ -5131,8 +5102,7 @@ input[type="radio"].s-visually-hidden {
       padding-left: 0;
       padding-right: 0; }
       .page-main--index .page-main__stable {
-        width: 720px;
-        margin-top: 159px; }
+        width: 720px; }
       .page-main--about .page-main__stable {
         width: 606px;
         margin-right: 204px; }

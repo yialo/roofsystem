@@ -1,6 +1,12 @@
 #{$this}__paginator {
-  position: relative;
-  padding-top: 12px;
-  padding-left: 26px;
-  padding-right: 26px;
+  display: flex;
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-right: 0;
+  }
 }

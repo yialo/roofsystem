@@ -4,7 +4,11 @@ block page-id
   - const pageId = 'index';
 
 block page-main_Content
-  - const INTRO_SLIDES = [['кровли', 'первый', 'новой'], ['фасада', 'второй', 'нового']];
+  -
+    const INTRO_SLIDES = [
+      ['кровли', 'первый', 'новой'],
+      ['фасада', 'второй', 'нового'],
+    ];
   each slide, i in INTRO_SLIDES
     -
       const number = i + 1;
@@ -14,17 +18,21 @@ block page-main_Content
         .intro__container
           div(class=setModifiers('intro__nest', ['paginator']))
             .intro__paginator
-              each modifier, j in ['current', 'another']
-                span(
-                  class=setModifiers('intro__number', [modifier]),
-                  role='presentation',
-                  aria-hidden='true',
-                )= (number === 1 ? j + 1 : 2 - j)
-              .intro__bar
-                button.intro__toggle(
+              -
+                const _PAGINATOR_BUTTONS = [
+                  ['roof', 'Кровля',],
+                  ['front', 'Фасад',],
+                ];
+              each item, j in _PAGINATOR_BUTTONS
+                - const [modifier, legend] = item;
+                button(
+                  class=[
+                    setModifiers('intro__button', [modifier]),
+                    `intro__button--${j === i ? 'current' : 'non-current'}`,
+                  ],
                   type='button',
-                  aria-label=`Перейти на ${numeral} слайд`,
-                )
+                  disabled=(j === i ? true : false),
+                )= legend
           div(class=setModifiers('intro__nest', ['content']))
             p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка #{adjective} #{product} обходится в приличную сумму денег, занимает большое количество времени.
 
