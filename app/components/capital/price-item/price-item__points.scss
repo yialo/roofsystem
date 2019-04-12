@@ -1,0 +1,5 @@
+.#{$this}__points {
+  @include list();
+  margin-top: -$_gutter;
+  margin-bottom: -$_gutter;
+}

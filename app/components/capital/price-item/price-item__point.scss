@@ -1,0 +1,18 @@
+.#{$this}__point {
+  $_dash-width: 6px;
+
+  display: flex;
+  align-items: center;
+  padding-top: $_gutter;
+  padding-bottom: $_gutter;
+  font-size: 16px;
+  line-height: 26px;
+
+  &::before {
+    content: "";
+    width: $_dash-width;
+    height: 1px;
+    margin-right: $_dash-width;
+    background-color: $_point-color;
+  }
+}

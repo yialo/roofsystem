@@ -1,0 +1,23 @@
+.#{$this}__caption {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 52px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    min-height: 52px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    min-height: 0;
+  }
+}

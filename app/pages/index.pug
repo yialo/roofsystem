@@ -5,15 +5,13 @@ block page-id
 
 block page-main_Content
   -
-    const INTRO_SLIDES = [
+    const _INTRO_SLIDES = [
       ['кровли', 'первый', 'новой'],
       ['фасада', 'второй', 'нового'],
     ];
-  each slide, i in INTRO_SLIDES
-    -
-      const number = i + 1;
-      const [product, numeral, adjective] = slide;
-    +page-main__wrapper(product)(modifier=number)
+  each slide, i in _INTRO_SLIDES
+    - const [product, numeral, adjective] = slide;
+    +page-main__wrapper()(product-name=product, modifier= i + 1)
       .intro
         .intro__container
           div(class=setModifiers('intro__nest', ['paginator']))
@@ -35,7 +33,7 @@ block page-main_Content
                 )= legend
           div(class=setModifiers('intro__nest', ['content']))
             p.s-text.intro__description Монтаж #{product} – это сложный многоэтапный процесс, выполнение которого предполагает наличие определенных навыков. Полная замена или установка #{adjective} #{product} обходится в приличную сумму денег, занимает большое количество времени.
-      +paginator()
+        +paginator()
 
 block page_Scripts-distinct
   script(src='js/intro.js')

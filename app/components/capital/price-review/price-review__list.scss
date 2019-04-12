@@ -1,0 +1,12 @@
+.#{$this}__list {
+  @include list();
+  margin-top: -$_gutter-ver;
+  margin-bottom: -$_gutter-ver;
+
+  @include media-breakpoint-up(md) {
+    @include margin-hor(-$_gutter-hor);
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,10 @@
+.#{$this}__item {
+  padding-top: $_gutter-ver;
+  padding-bottom: $_gutter-ver;
+
+  @include media-breakpoint-up(md) {
+    @include padding-hor($_gutter-hor);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

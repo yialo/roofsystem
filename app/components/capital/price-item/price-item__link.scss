@@ -1,0 +1,8 @@
+.#{$this}__link {
+  color: $_point-color;
+
+  &:hover {
+    color: $color-coral;
+    text-decoration: underline;
+  }
+}

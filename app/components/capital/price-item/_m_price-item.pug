@@ -1,0 +1,11 @@
+mixin price-item()
+  -
+    const { item } = attributes;
+    const [caption, list] = item;
+  .price-item
+    h3.price-item__caption
+      a.price-item__title-link(href='#')= caption
+    ul.price-item__points
+      each entitlement in list
+        li.price-item__point
+          a.price-item__link(href='#')= entitlement
