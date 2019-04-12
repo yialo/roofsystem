@@ -1,4 +1,4 @@
-#{$this}__container {
+.#{$this}__container {
   padding-top: 32px;
   padding-bottom: 160px;
 
@@ -18,17 +18,17 @@
     display: flex;
     padding-top: 0;
 
-    #{$this}--index & {
+    .#{$this}--index & {
       padding-top: 120px;
       padding-bottom: 320px;
     }
 
-    #{$this}--about & {
+    .#{$this}--about & {
       padding-top: 120px;
       padding-bottom: 360px;
     }
 
-    #{$this}--gallery & {
+    .#{$this}--gallery & {
       display: grid;
       grid-template: 1fr / 25% 10% 1fr;
       justify-content: start;
@@ -36,40 +36,40 @@
       padding-bottom: 400px;
     }
 
-    #{$this}--price & {
+    .#{$this}--price & {
       padding-top: 140px;
       padding-bottom: 320px;
     }
 
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       padding-top: 120px;
       padding-bottom: 400px;
     }
   }
 
   @include media-breakpoint-up(xxl) {
-    #{$this}--index & {
+    .#{$this}--index & {
       padding-top: 256px;
       padding-bottom: 440px;
     }
 
-    #{$this}--about & {
+    .#{$this}--about & {
       padding-top: 207px;
       padding-bottom: 430px;
     }
 
-    #{$this}--gallery & {
+    .#{$this}--gallery & {
       display: grid;
       grid-template: 1fr / 494px 110px 1fr;
       padding-bottom: 578px;
     }
 
-    #{$this}--price & {
+    .#{$this}--price & {
       padding-top: 207px;
       padding-bottom: 474px;
     }
 
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       padding-top: 207px;
       padding-bottom: 663px;
     }

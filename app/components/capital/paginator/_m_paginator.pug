@@ -1,6 +1,6 @@
-mixin titlebar__links()
+mixin paginator()
   -
-    const getTitlebarItems = function getDatasetForTitlebarItems() {
+    const getPaginatorLinks = function getDatasetForPaginatorLinks() {
       const toAbout = ['about', 'Читать о компании'];
       const toGallery = ['gallery', 'Посмотреть галерею'];
       const toPrice = ['price', 'Узнать цены'];
@@ -14,10 +14,10 @@ mixin titlebar__links()
       }
       return set;
     };
-  .titlebar__links
-    each item, i in getTitlebarItems()
+  .paginator(class=(['index', 'gallery', 'price'].includes(pageId) ? 'paginator--narrow-xl' : null))
+    each item, i in getPaginatorLinks()
       - const [modifier, legend] = item;
       a(
-        class=setModifiers('titlebar__link', [modifier, i + 1]),
+        class=setModifiers('paginator__link', [modifier, i + 1]),
         href=`${modifier}.html`,
       )= legend

@@ -1,9 +1,9 @@
-#{$this}__links {
+.#{$this} {
   display: flex;
   flex-direction: column;
 
   @include media-breakpoint-up(md) {
-    @include padding-hor(15px);
+    @include padding-hor(30px);
     flex-direction: row;
     justify-content: space-between;
   }
@@ -17,10 +17,15 @@
     justify-content: space-between;
 
     @include media-breakpoint-down(xl) {
-      #{$this}--narrow-xl & {
+      &--narrow-xl {
+        @include padding-hor(30px);
         display: flex;
         flex-direction: column;
       }
+    }
+
+    @include media-breakpoint-down(xxl) {
+      padding-left: 30px;
     }
   }
 }

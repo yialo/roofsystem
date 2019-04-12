@@ -1,28 +1,28 @@
-#{$this}__mutable {
+.#{$this}__mutable {
   @include media-breakpoint-up(xl) {
     flex: 0 0 auto;
 
-    #{$this}--index & {
+    .#{$this}--index & {
       width: 45%;
     }
 
-    #{$this}--about & {
+    .#{$this}--about & {
       width: 45%;
     }
 
-    #{$this}--gallery & {
+    .#{$this}--gallery & {
       @include padding-hor(0);
       grid-area: 1 / 2 / 2 / 4;
       margin-top: 80px;
     }
 
-    #{$this}--price & {
+    .#{$this}--price & {
       width: 60%;
       padding-left: 0;
       padding-right: 30px;
     }
 
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       width: 45%;
       padding-left: 0;
       padding-right: 30px;
@@ -30,23 +30,23 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    #{$this}--index & {
+    .#{$this}--index & {
       width: 606px;
     }
 
-    #{$this}--about & {
+    .#{$this}--about & {
       width: 600px;
     }
 
-    #{$this}--gallery & {
+    .#{$this}--gallery & {
       margin-top: 134px;
     }
 
-    #{$this}--price & {
+    .#{$this}--price & {
       width: 786px;
     }
 
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       width: 784px;
     }
   }

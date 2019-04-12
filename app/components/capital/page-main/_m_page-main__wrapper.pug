@@ -5,16 +5,13 @@ mixin page-main__wrapper(productName)
   .container.page-main__wrapper(class=modifierClassname)
     .s-container.page-main__container.row
       .page-main__stable.col-12
-        div(class=[
-          setModifiers('titlebar', [isIndex ? 'inner' : 'inner']),
-          ['gallery', 'price'].includes(pageId) ? 'titlebar--narrow-xl' : null,
-        ])
+        div(class=setModifiers('titlebar', [isIndex ? 'inner' : 'inner']))
           if isIndex
             h1.titlebar__heading= $SITE_TITLE
             .titlebar__lead-wrapper
               p.titlebar__lead Устройство, монтаж и ремонт #{productName}
           else
             h1.titlebar__lead= $pageTitle
-          +titlebar__links()
+            +paginator()
       .page-main__mutable.col-12
         block

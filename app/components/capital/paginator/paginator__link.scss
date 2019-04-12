@@ -1,4 +1,4 @@
-#{$this}__link {
+.#{$this}__link {
   $link-modifiers: (about, gallery, price,);
 
   align-self: center;
@@ -47,7 +47,6 @@
     }
   }
 
-
   @include media-breakpoint-up(xl) {
     width: auto;
     font-size: 24px;
@@ -66,7 +65,7 @@
     }
 
     @include media-breakpoint-down(xl) {
-      #{$this}--narrow-xl & {
+      .#{$this}--narrow-xl & {
         align-self: flex-start;
         width: 100%;
       }

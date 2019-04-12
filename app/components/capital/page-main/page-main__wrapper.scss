@@ -1,4 +1,4 @@
-#{$this}__wrapper {
+.#{$this}__wrapper {
   flex-grow: 1;
   background-color: $color-gray-background;
   background-image: url("../img/page-main__wrapper@1920.png");
@@ -21,7 +21,7 @@
     }
   }
 
-  #{$this}--about & {
+  .#{$this}--about & {
     background-image: url("../img/page-main__wrapper--about@1920.png");
   }
 

@@ -1,4 +1,4 @@
-#{$this}__stable {
+.#{$this}__stable {
   margin-bottom: 56px;
 
   @include media-breakpoint-up(xl) {
@@ -6,28 +6,28 @@
     flex: 0 0 auto;
     margin-bottom: 0;
 
-    #{$this}--index & {
+    .#{$this}--index & {
       width: 55%;
       margin-right: auto;
     }
 
-    #{$this}--about & {
+    .#{$this}--about & {
       width: 55%;
     }
 
-    #{$this}--gallery & {
+    .#{$this}--gallery & {
       grid-area: 1 / 1 / 2 / 3;
       margin-top: 160px;
       padding-right: 0;
     }
 
-    #{$this}--price & {
+    .#{$this}--price & {
       width: 35%;
       margin-right: auto;
       padding-right: 0;
     }
 
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       width: 50%;
       margin-right: auto;
       padding-right: 0;
@@ -37,25 +37,25 @@
   @include media-breakpoint-up(xxl) {
     @include padding-hor(0);
 
-    #{$this}--index & {
+    .#{$this}--index & {
       width: 720px;
     }
 
-    #{$this}--about & {
+    .#{$this}--about & {
       width: 606px;
       margin-right: 204px;
     }
 
-    #{$this}--gallery & {
+    .#{$this}--gallery & {
       margin-top: 207px;
     }
 
-    #{$this}--price & {
+    .#{$this}--price & {
       width: 604px;
       margin-right: auto;
     }
 
-    #{$this}--contacts & {
+    .#{$this}--contacts & {
       width: 606px;
     }
   }
