@@ -5,7 +5,7 @@
   ],
   "description": "Roofsystem site development",
   "devDependencies": {
-    "autoprefixer": "9.5.0",
+    "autoprefixer": "9.5.1",
     "bootstrap": "4.3.1",
     "browser-sync": "2.26.3",
     "del": "4.1.0",
@@ -30,6 +30,7 @@
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "7.0.0",
     "imagemin-zopfli": "6.0.0",
+    "jquery": "3.4.0",
     "node-sass-magic-importer": "5.3.1",
     "normalize.css": "8.0.1",
     "pug-lint": "2.5.0",
