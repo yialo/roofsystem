@@ -1,36 +1,36 @@
-#{$this}__link {
+.#{$this}__link {
   color: $color-gray-dark;
 
-  #{$this}--small & {
+  .#{$this}--small & {
     font-weight: 700;
     font-size: 16px;
   }
 
-  #{$this}--large & {
+  .#{$this}--large & {
     font-size: 32px;
     letter-spacing: 0.03em;
   }
 
   @include media-breakpoint-up(sm) {
-    #{$this}--small & {
+    .#{$this}--small & {
       font-size: 28px;
     }
   }
 
   @include media-breakpoint-up(md) {
-    #{$this}--small & {
+    .#{$this}--small & {
       font-size: 32px;
     }
   }
 
   @include media-breakpoint-up(lg) {
-    #{$this}--small & {
+    .#{$this}--small & {
       font-size: 20px;
     }
   }
 
   @include media-breakpoint-up(xl) {
-    #{$this}--large & {
+    .#{$this}--large & {
       font-size: 48px;
       line-height: 1.1;
       letter-spacing: 0.03em;
@@ -38,7 +38,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    #{$this}--large & {
+    .#{$this}--large & {
       font-size: 64px;
       line-height: 72px;
     }

@@ -1,4 +1,4 @@
-#{$this}__container {
+.#{$this}__container {
   @include margin-hor();
   min-height: 100vh;
   display: flex;

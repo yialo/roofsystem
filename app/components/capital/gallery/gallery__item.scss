@@ -1,4 +1,4 @@
-#{$this}__item {
+.#{$this}__item {
   @include margin-bottom-last(48px);
 
   @include media-breakpoint-up(md) {

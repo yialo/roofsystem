@@ -1,5 +1,5 @@
-#{$this}__wrapper {
-  #{$this}--opener & {
+.#{$this}__wrapper {
+  .#{$this}--opener & {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -1,4 +1,4 @@
-#{$this}__container {
+.#{$this}__container {
   @include padding-hor(15px);
 
   @include media-breakpoint-up(lg) {

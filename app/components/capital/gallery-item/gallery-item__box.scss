@@ -1,4 +1,4 @@
-#{$this}__box {
+.#{$this}__box {
   @mixin item-size($breakpoint-name) {
     $base-width: get-gallery-base-width($breakpoint-name);
     $height-outermost: $base-width;

@@ -1,4 +1,4 @@
-#{$this}__container {
+.#{$this}__container {
   @include media-breakpoint-up(lg) {
     pointer-events: all;
   }

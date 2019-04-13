@@ -1,4 +1,4 @@
-#{$this}__lead {
+.#{$this}__lead {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 700;
@@ -8,7 +8,7 @@
   text-transform: uppercase;
   color: $color-gray-dark;
 
-  #{$this}--inner & {
+  .#{$this}--inner & {
     margin-bottom: 24px;
   }
 
@@ -18,7 +18,7 @@
     letter-spacing: 0.03em;
     text-align: left;
 
-    #{$this}--inner & {
+    .#{$this}--inner & {
       margin-bottom: 64px;
     }
   }

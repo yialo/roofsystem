@@ -1,4 +1,4 @@
-#{$this}__link {
+.#{$this}__link {
   @include media-breakpoint-down(md) {
     @include padding-hor(30px);
     display: block;
@@ -12,11 +12,11 @@
       background-color: $color-gray-air;
     }
 
-    #{$this}--last & {
+    .#{$this}--last & {
       box-shadow: none;
     }
 
-    #{$this}--current & {
+    .#{$this}--current & {
       color: $color-gray-air;
 
       &:hover {
