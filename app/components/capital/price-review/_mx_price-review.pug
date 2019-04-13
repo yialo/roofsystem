@@ -1,0 +1,7 @@
+mixin price-review()
+  .price-review
+    ul.price-review__list
+      include _dt_price-review.pug
+      each item in _ITEMS
+        li.price-review__item
+          +price-item()(item=item)
