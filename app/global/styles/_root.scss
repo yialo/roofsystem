@@ -1,11 +1,1 @@
 /* Root custom properties */
-
-:root {
-  @include media-breakpoint-up(lg) {
-    --gallery-base-image-width: #{get-gallery-base-width(lg)};
-  }
-
-  @include media-breakpoint-up(xxl) {
-    --gallery-base-image-width: #{get-gallery-base-width(xxl)};
-  }
-}

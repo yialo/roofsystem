@@ -15,15 +15,22 @@
   }
 
   @include media-breakpoint-up(lg) {
+    --#{$this}-base-image-width: #{get-gallery-base-width(lg)};
+
     @include padding-hor(45px);
     grid-template-rows:
-      calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(top)})
+      calc(var(--#{$this}-base-image-width) * #{get-gallery-coefficient(top)})
       minmax(
-        calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(main)}),
+        calc(
+            var(--#{$this}-base-image-width) * #{get-gallery-coefficient(main)}
+        ),
         auto
       )
       minmax(
-        calc(var(--gallery-base-image-width) * #{get-gallery-coefficient(middle)}),
+        calc(
+          var(--#{$this}-base-image-width)
+          * #{get-gallery-coefficient(middle)}
+        ),
         auto
       )
       1fr;
@@ -34,5 +41,9 @@
 
   @include media-breakpoint-up(xl) {
     @include padding-hor(0);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    --#{$this}-base-image-width: #{get-gallery-base-width(xxl)};
   }
 }

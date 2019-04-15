@@ -14,7 +14,10 @@ mixin paginator()
       }
       return set;
     };
-  .paginator(class=['index', 'gallery', 'price'].includes(pageId) ? 'paginator--narrow-xl' : null)
+  .paginator(class=[
+    ['index', 'gallery', 'price'].includes(pageId) ? 'paginator--narrow-xl' : null,
+    pageId === 'index' ? 'paginator--index' : null,
+  ])
     each item, i in getPaginatorLinks()
       - const [modifier, legend] = item;
       a(

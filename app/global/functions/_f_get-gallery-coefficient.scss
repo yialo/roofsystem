@@ -1,5 +1,5 @@
 @function get-gallery-coefficient($target-block-id) {
-  $gallery-dividends: (top: 496, main: 480, middle: 280,);
+  $gallery-dividends: (top: 496, main: 408, middle: 280,);
   $gallery-divisor: 624;
   $gallery-dividend: map-get($gallery-dividends, $target-block-id);
   $gallery-coefficient: ($gallery-dividend / $gallery-divisor);

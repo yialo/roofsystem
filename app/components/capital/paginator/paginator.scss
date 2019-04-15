@@ -18,14 +18,19 @@
 
     @include media-breakpoint-down(xl) {
       &--narrow-xl {
-        @include padding-hor(30px);
         display: flex;
         flex-direction: column;
+      }
+
+      &--index {
+        @include padding-hor(30px);
       }
     }
 
     @include media-breakpoint-down(xxl) {
-      padding-left: 30px;
+      &--index {
+        padding-left: 30px;
+      }
     }
   }
 }
