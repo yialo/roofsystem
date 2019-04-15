@@ -49,3 +49,5 @@ function init() {
   map.controls.add(fullscreenControlObject);
   map.geoObjects.add(marker);
 }
+
+// TODO: добавить модный verbose-hint

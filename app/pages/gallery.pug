@@ -12,53 +12,12 @@ block head_Scripts
   link(rel='preload', href='js/slick.js', as='script')
   // test comment
 block page-main__mutable
-  .gallery
-    -
-      const GALLERY_ITEMS = [
-        ['Вишневый сад', 16],
-        ['Беседки', 7],
-        ['Раздоры', 6],
-        ['Школа экономики', 5],
-      ];
-      const GALLERY_MEDIA_SET = [['xxl', 624], ['lg', 410], 290];
-    ul.gallery__list
-      each item, i in GALLERY_ITEMS
-        -
-          const number = i + 1;
-          const [caption, amount] = item;
-        li(class=[
-          setModifiers('gallery-item', [number]),
-          setModifiers('gallery__item', [number]),
-          setLastModifier('gallery__item', GALLERY_ITEMS, number, false),
-        ])
-          .gallery-item__container
-            div(class=setModifiers('gallery-item__box', ['pictures']))
-              include ../components/capital/gallery-item/_m_gallery-item__box--picture.pug
-              - for (let j = 1; j <= amount; j += 1)
-                .gallery-item__wrapper
-                  +gallery-item__box--picture({
-                    alt: caption,
-                    path: `gallery-item--${number}__image-${j}`,
-                    mediaSet: GALLERY_MEDIA_SET,
-                  })
-            p.gallery-item__caption
-              time.gallery-item__time(datetime='2018-02-13') 13.02.2018
-              span.s-text.gallery-item__legend= caption
-          .gallery-item__popup
-            each title, number in caption.slice(1)
-              - const j = number + 2;
-              a.project-cards__link(
-                href=`img/gallery-item--${i}-${j}.jpg`,
-                data-lightbox=`gallery-item-${i}`,
-                data-headline=group,
-                data-title=title,
-                data-alt=title,
-              )
+  +gallery()
 
 block page_Scripts-distinct
   script.
     'use strict';
     window.jQuery || document.write('<script src="js/jquery-3.3.1.js"><\/script>');
   script(src='js/slick.js')
-  script(src='js/lightbox.js')
   script(src='js/gallery-item.js')
+  script(src='js/lightbox.js')

@@ -34,12 +34,14 @@ const bitmapExts = '{gif,jpg,png}';
 const fontExts = '{woff,woff2}';
 
 const getSrc = function getSourcePathsForCopy(srcFolder, extSet) {
-  const globalPath = `./app/global/${srcFolder}/*.${extSet}`;
+  const globalPath = `./app/global/${srcFolder}/**/*.${extSet}`;
   const componentsPath = `./app/components/**/${srcFolder}/**/*.${extSet}`;
   return [globalPath, componentsPath];
 };
 
 const bitmapsSrc = getSrc('bitmaps', bitmapExts);
+const svgSrc = getSrc('svg', 'svg');
+const videoSrc = getSrc('video', 'mp4');
 const faviconstSrc = './app/global/favicons/*';
 const fontsSrc = `./app/global/fonts/*.${fontExts}`;
 const jsSrc = [
@@ -47,8 +49,6 @@ const jsSrc = [
   './app/vendors/*.js',
   './app/vendors_customized/*.js',
 ];
-const svgSrc = getSrc('svg', 'svg');
-const videoSrc = getSrc('video', 'mp4');
 const cssSrc = './app/base/main.scss';
 const pugSrc = './app/pages/*.pug';
 
