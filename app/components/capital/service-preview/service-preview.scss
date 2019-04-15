@@ -1,0 +1,24 @@
+.#{$this} {
+  padding: 30px 30px 38px;
+  background-color: white;
+  background-image:
+    url("../img/dash-array--horizontal.svg"),
+    url("../img/dash-array--horizontal.svg"),
+    url("../img/dash-array--vertical.svg"),
+    url("../img/dash-array--vertical.svg");
+  background-position:
+    0 0,
+    0 100%,
+    0 0,
+    100% 0;
+  background-size:
+    8px 1px,
+    8px 1px,
+    1px 8px,
+    1px 8px;
+  background-repeat:
+    repeat-x,
+    repeat-x,
+    repeat-y,
+    repeat-y;
+}

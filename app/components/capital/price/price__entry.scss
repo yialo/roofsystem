@@ -14,8 +14,8 @@
   }
 
   @include media-breakpoint-up(md) {
-    $i-ver: "url(\"../img/price__entry--vertical.svg\")";
-    $i-hor: "url(\"../img/price__entry--horizontal.svg\")";
+    $i-ver: "url(\"../img/dash-array--vertical.svg\")";
+    $i-hor: "url(\"../img/dash-array--horizontal.svg\")";
     $p-start: "0.5px";
     $p-end: "calc(100% - 1.5px)";
     $s-ver: "1px 8px";

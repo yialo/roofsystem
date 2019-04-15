@@ -1,0 +1,12 @@
+mixin service-preview()
+  -
+    const _CAPTION = 'Сланцевая кровля';
+    const _DETAILS = 'Кровельный сланец – натуральный штучный материал природного происхождения для скатных кровель, изготовленный из специальных отобранных пород. Кровельный сланец выпускается в виде плиток серого, темно-серого и черного цветов, но можно найти плитки красного или фиолетового оттенка. Сланцевую плитку используют при покрытии кровельных конструкций с уклоном от 15° и выше. Готовое кровельное покрытие внешне напоминает рыбью чешую.';
+  .service-preview
+    p.service-preview__caption= _CAPTION
+    picture.service-preview__picture
+      img.service-preview__image(
+        src='img/service-preview__example.jpg',
+        alt=_DETAILS,
+      )
+    p.service-preview__details= _DETAILS

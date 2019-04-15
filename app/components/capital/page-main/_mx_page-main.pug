@@ -16,5 +16,8 @@ mixin page-main__wrapper()
           else
             h1.titlebar__lead= $pageTitle
             +paginator()
+          if pageId === 'price'
+            .titlebar__preview
+              +service-preview()
       .page-main__mutable.col-12
         block

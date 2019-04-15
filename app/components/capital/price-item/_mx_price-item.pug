@@ -4,8 +4,8 @@ mixin price-item()
     const [caption, list] = item;
   .price-item
     h3.price-item__caption
-      a.price-item__title-link(href='#')= caption
+      a.price-item__title-link(href='price.html')= caption
     ul.price-item__points
       each entitlement in list
         li.price-item__point
-          a.price-item__link(href='#')= entitlement
+          a.price-item__link(href='price.html')= entitlement
