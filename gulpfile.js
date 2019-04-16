@@ -46,8 +46,8 @@ const faviconstSrc = './app/global/favicons/*';
 const fontsSrc = `./app/global/fonts/*.${fontExts}`;
 const jsSrc = [
   './app/scripts/*.js',
-  './app/vendors/*.js',
-  './app/vendors_customized/*.js',
+  './app/vendor/*.js',
+  './app/vendor_customized/*.js',
 ];
 const cssSrc = './app/base/main.scss';
 const pugSrc = './app/pages/*.pug';
