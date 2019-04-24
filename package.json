@@ -48,7 +48,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/alekseiarrowaytostart/roofsystem.git"
+    "url": "git+https://github.com/yialo/roofsystem.git"
   },
   "scripts": {
     "build": "gulp build",
